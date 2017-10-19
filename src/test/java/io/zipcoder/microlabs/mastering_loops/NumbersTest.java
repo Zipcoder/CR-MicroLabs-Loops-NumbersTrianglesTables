@@ -21,10 +21,14 @@ public class NumbersTest {
     @Test
     public void oddNumbersTest(){
         //: Given
+        Numbers numbers = new Numbers();
+        String expected = "oddNumbers()\n*** Output ***\n1\n3\n5\n7\n9\n11\n13\n15\n17\n19";
 
         //: When
+        String actual = numbers.oddNumbers();
 
         //: Then
+        Assert.assertEquals("Returns a string of positive odd numbers", expected, actual);
     }
 
     @Test
