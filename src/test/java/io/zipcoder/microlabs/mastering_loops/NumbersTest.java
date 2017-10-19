@@ -43,7 +43,8 @@ public class NumbersTest {
     }
 
     @Test
-    public void random4Test(){
+    public void random4Test()
+    {
         //: Given
 
         //: When
@@ -52,12 +53,16 @@ public class NumbersTest {
     }
 
     @Test
-    public void evenTest(){
+    public void evenTest()
+    {
         //: Given
-
+            Numbers numbers = new Numbers();
+            int n=20;
+            String expected = "even(20)\n*** Output ***\n2\n4\n6\n8\n10\n12\n14\n16\n18";
         //: When
-
+            String actual = numbers.even(n);
         //: Then
+            Assert.assertEquals("The two strings are equal",expected, actual);
     }
 
     @Test
