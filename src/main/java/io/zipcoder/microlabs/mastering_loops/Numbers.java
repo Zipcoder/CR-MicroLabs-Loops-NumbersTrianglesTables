@@ -24,8 +24,16 @@ public class Numbers {
         return output;
     }
 
-    public String squares(){
-        return "";
+    public String squares()
+    {/*In the class Numbers, complete the method called squares()
+    so that it returns a string of the square numbers up to 100.
+    The Unit Test is not provided for you, you must complete it.*/
+        String output = "squares()\n*** Output ***";
+        for (int i=1; i<=10; i++)
+        {
+            output+= "\n" + (i*i);
+        }
+        return output;
     }
 
     public String random4(){
