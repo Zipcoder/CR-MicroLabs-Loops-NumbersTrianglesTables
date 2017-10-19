@@ -65,8 +65,22 @@ public class Numbers {
         return output;
     }
 
-    public String powers(int n){
-        return "";
+    public String powers(int n)
+    {/*In the class Numbers, complete the method called powers()
+        so that it returns a string of out the powers of 2 from 2^1
+        up to to 2^n. The Unit Test is not provided for you, you
+        must complete it.*/
+        String output = "powers(8)\n*** Output ***";
+
+        if (n>=1)
+        {
+            for (int i=1; i<=n; i++)
+            {
+                output+= "\n" + ((int) Math.pow(2, i));
+            }
+        }
+
+        return output;
     }
 
 }
