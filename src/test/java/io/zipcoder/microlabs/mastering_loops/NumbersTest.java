@@ -15,7 +15,7 @@ public class NumbersTest {
         String actual = numbers.oneToTen();
 
         //: Then
-        Assert.assertEquals("The two strings are equal", expected, actual);
+        Assert.assertEquals("The two strings are not equal", expected, actual);
     }
 
     @Test
@@ -27,7 +27,7 @@ public class NumbersTest {
         //: When
             String actual = numbers.oddNumbers();
         //: Then
-            Assert.assertEquals("The two strings are equal",expected, actual);
+            Assert.assertEquals("The two strings are not equal",expected, actual);
     }
 
     @Test
@@ -39,7 +39,7 @@ public class NumbersTest {
         //: When
             String actual = numbers.squares();
         //: Then
-            Assert.assertEquals("The two strings are equal", expected, actual);
+            Assert.assertEquals("The two strings are not equal", expected, actual);
     }
 
     @Test
@@ -62,16 +62,19 @@ public class NumbersTest {
         //: When
             String actual = numbers.even(n);
         //: Then
-            Assert.assertEquals("The two strings are equal",expected, actual);
+            Assert.assertEquals("The two strings are not equal",expected, actual);
     }
 
     @Test
     public void powersTest(){
         //: Given
-
+        Numbers numbers = new Numbers();
+        String expected = "powers(8)\n*** Output ***\n2\n4\n8\n16\n32\n64\n128\n256";
+        int n = 8;
         //: When
-
+        String actual = numbers.powers(n);
         //: Then
+        Assert.assertEquals("The two strings are not equal", expected, actual);
     }
 
 }
