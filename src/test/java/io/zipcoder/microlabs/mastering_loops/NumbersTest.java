@@ -34,10 +34,12 @@ public class NumbersTest {
     @Test
     public void squaresTest(){
         //: Given
-
+        Numbers numbers = new Numbers();
+        String expected = "squares()\n*** Output ***\n1\n4\n9\n16\n25\n36\n49\n64\n81\n100";
         //: When
-
+        String actual = numbers.squares();
         //: Then
+        Assert.assertEquals("Returns a string of all square numbers", expected, actual);
     }
 
     @Test
@@ -52,19 +54,25 @@ public class NumbersTest {
     @Test
     public void evenTest(){
         //: Given
-
+        Numbers numbers = new Numbers();
+        String expected = "even(20)\n*** Output ***\n2\n4\n6\n8\n10\n12\n14\n16\n18";
         //: When
-
+        String actual = numbers.even(20);
         //: Then
+        Assert.assertEquals("Returns a string of all even numbers", expected, actual);
     }
 
     @Test
     public void powersTest(){
         //: Given
+        Numbers numbers = new Numbers();
+        String expected = "powers(8)\n*** Output ***\n2\n4\n8\n16\n32\n64\n128\n256";
 
         //: When
+        String actual = numbers.powers(8);
 
         //: Then
+        Assert.assertEquals("Returns a string of the powers of 2 from 2^1 up to to 2^n", expected, actual);
     }
 
 }
