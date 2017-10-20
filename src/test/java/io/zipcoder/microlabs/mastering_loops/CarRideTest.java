@@ -6,10 +6,24 @@ import org.junit.Test;
 public class CarRideTest {
 
     @Test
-    public void testInputTest() {
+    public void testInputYesTest() {
         // Given
         String userInput = "Yes";
         String expected = "Good!";
+        CarRide carRide = new CarRide();
+
+        // When
+        String actual = carRide.testInput(userInput);
+
+        // Then
+        Assert.assertEquals("The strings are not the same",expected, actual);
+    }
+
+    @Test
+    public void testInputOtherTest() {
+        // Given
+        String userInput = "Other";
+        String expected = "";
         CarRide carRide = new CarRide();
 
         // When
