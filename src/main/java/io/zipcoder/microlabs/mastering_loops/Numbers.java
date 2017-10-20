@@ -35,15 +35,37 @@ public class Numbers {
     }
 
     public String random4(){
-        return "";
+
+        String random = "*** Output ***\nrandom()";
+
+        for(int i = 1; i <=4; i++) {
+            random += "\n";
+            random += (int) Math.floor(Math.random() * 10 - 1 + 1);
+        }
+        return random;
     }
 
     public String even(int n){
-        return "";
+
+        String evenNum = "*** Output ***\neven(20)";
+        for(int i = 1; i < n; i++){
+            if(i%2 == 0){
+                evenNum += "\n" + i;
+            }
+        }
+        return evenNum;
     }
 
     public String powers(int n){
-        return "";
+
+        String pow = "*** Output ***\npowers(" + n + ")";
+
+        for(int i = 1; i <= n; i++){
+            pow += "\n";
+            pow += (int)Math.pow(2,i);
+        }
+
+        return pow;
     }
 
 }
