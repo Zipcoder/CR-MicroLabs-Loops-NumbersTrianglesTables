@@ -4,23 +4,12 @@ import java.util.Scanner;
 
 public class CarRide {
 
-    public String areWeThereYetRide(boolean areWeThereYetInput){
-
-        do {
-
-            if (areWeThereYetInput){
-
-                return "Good!";
-
-            } else {return "Are we there yet?";}
-
-        } while (!areWeThereYetInput);
-
-    }
-
-    boolean areWeThereYetInput(Scanner input){
-        String answer = input.nextLine();
-        return "Yes".equalsIgnoreCase(answer);
+    public String areWeThereYetRide(String userInput) {
+        if ("Yes".equals(userInput)) {
+            return "Good!";
+        } else {
+            return "Are we there yet?";
+        }
     }
 
 }

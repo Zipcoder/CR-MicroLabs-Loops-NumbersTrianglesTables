@@ -7,34 +7,8 @@ import java.util.Scanner;
 
 
 public class CarRideTest {
-    @Test
-    public void areWeThereYetInputNoTest_InputIsNo_ShouldEqualFalse() {
-        //: Given
-        CarRide carRide = new CarRide();
-        Scanner scanner = new Scanner("No");
 
-        //: When
-        boolean actual = carRide.areWeThereYetInput(scanner);
-
-        //: Then
-        Assert.assertFalse(actual);
-
-    }
-
-    @Test
-    public void areWeThereYetInputNoTest_InputIsYes_ShouldEqualTrue() {
-        //: Given
-        CarRide carRide = new CarRide();
-        Scanner scanner = new Scanner("Yes");
-
-        //: When
-        boolean actual = carRide.areWeThereYetInput(scanner);
-
-        //: Then
-        Assert.assertTrue(actual);
-
-    }
-
+/*
     @Test
     public void areWeThereYetRideTest_InputIsTrue_ShouldEqualGood(){
         //: Given
@@ -61,5 +35,5 @@ public class CarRideTest {
 
         //: Then
         Assert.assertEquals(actual, expected);
-    }
+    } */
 }
