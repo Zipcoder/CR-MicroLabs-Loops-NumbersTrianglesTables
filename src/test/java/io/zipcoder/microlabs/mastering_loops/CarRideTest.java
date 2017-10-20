@@ -25,9 +25,11 @@ public class CarRideTest {
         CarRide car = new CarRide();
 
         //: When
-        boolean actual2 = car.areWeThere("Spoon");
+        boolean actual1 = car.areWeThere("Spoon");
+        boolean actual2 = car.areWeThere("No");
 
         //: Then
+        Assert.assertFalse(actual1);
         Assert.assertFalse(actual2);
     }
 
