@@ -7,25 +7,46 @@ import org.junit.Test;
 public class CarRideTest {
 
     @Test
-    public void areWeThereYetTest(){
+    public void areWeThereYetYesTest(){
         //: Given
         CarRide carride = new CarRide();
 
 
         String yesExpected = "Good!";
-        String noExpected = "Are we there yet?";
-        String otherExpected = "Are we there yet?";
+
+
 
         //: When
 
         String yesActual = carride.areWeThereYet("Yes");
-        String noActual = carride.areWeThereYet("No");
-        String otherActual = carride.areWeThereYet("Spoon");
+
+
 
         //: Then
         Assert.assertEquals("Yes",yesExpected,yesActual);
+
+
+    }
+    @Test
+    public void areWeThereYetNoTest(){
+        //: Given
+        CarRide carride = new CarRide();
+
+
+
+        String noExpected = "Are we there yet?";
+
+
+        //: When
+
+
+        String noActual = carride.areWeThereYet("");
+
+
+        //: Then
+
         Assert.assertEquals("No",noExpected,noActual);
-        Assert.assertEquals("Spoons",otherExpected,otherActual);
+
     }
 
 }
