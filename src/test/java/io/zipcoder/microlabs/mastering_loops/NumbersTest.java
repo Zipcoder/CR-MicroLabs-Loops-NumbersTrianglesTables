@@ -85,12 +85,52 @@ public class NumbersTest {
         Assert.assertEquals("The two strings are equal", expected, actual);
     }
     @Test
-    public void CarRide(String answer){
+    public void CarRideTest(){
 
         Numbers number = new Numbers();
         String expected = "Yes";
+        String actual = number.CarRide("Yes");
         Assert.assertEquals("The two strings are equal", expected, actual);
 
+    }
+
+    @Test
+    public void trianguleTest(){
+
+        Numbers numbers = new Numbers();
+        String expected = "*\n**\n***\n****\n*****\n******\n*******";
+        String actual = numbers.triangle();
+
+        Assert.assertEquals("The two strings are equal", expected, actual);
+    }
+
+    @Test
+    public void tableSquareTest(){
+        Numbers numbers = new Numbers();
+        String expected = "| 1 | 2 | 3 | 4 |\n" +
+                          "| 2 | 4 | 6 | 8 |\n" +
+                          "| 3 | 6 | 9 |12 |\n" +
+                          "| 4 | 8 |12 |16 |";
+
+        String actual = numbers.tableSquare();
+
+        Assert.assertEquals("The two strings are equal", expected, actual);
+
+
+    }
+
+    @Test
+    public void Shapes(){
+
+        Numbers number = new Numbers();
+        String expected = "|  1 |  2 |  3 |  4 |  5 |  6 |\n" +
+                          "|  2 |  4 |  6 |  8 | 10 | 12 |\n" +
+                          "|  3 |  6 |  9 | 12 | 15 | 18 |\n" +
+                          "|  4 |  8 | 12 | 16 | 20 | 24 |\n" +
+                          "|  5 | 10 | 15 | 20 | 25 | 30 |\n" +
+                          "|  6 | 12 | 18 | 24 | 30 | 36 |";
+        String actual = number.Shapes();
+        Assert.assertEquals("The two strings are equal", expected, actual);
 
     }
 
