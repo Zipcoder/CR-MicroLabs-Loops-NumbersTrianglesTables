@@ -49,33 +49,33 @@ public class NumbersTest {
         //: Given
         Numbers randNum = new Numbers();
         String ExpectedString = "random4()\n*** Output ***";
-        int startExpectedStirngLength = ExpectedString.length();
+        int startExpectedStringLength = ExpectedString.length();
         boolean[] numInRangeExpected = {true,true,true,true};
-        for(int i =0;i<4;i++){
+        for(int i =0;i<numInRangeExpected.length;i++){
             ExpectedString+="\n" +numInRangeExpected[i];
         }
 
         //: When
         String actualString = randNum.random4();
-        String newActualString = actualString.substring(0,startExpectedStirngLength);
+
+        String newActualString = actualString.substring(0,startExpectedStringLength);
+
+        String secondHalfExpectedString = actualString.substring(startExpectedStringLength+1);
+        String[] splitSecondHalfExpectedArray = secondHalfExpectedString.split("\n");
+
         boolean[] numInRangeActual = new boolean[4];
+
         int num;
-        int place;
-        char letter;
-        for(int i =0;i<4;i++){
-            place = i+startExpectedStirngLength;
-            letter = actualString.charAt(place);
-            num = Character.getNumericValue(letter);
-            if(0 < num && num <= 10){
+        for(int i =0;i<splitSecondHalfExpectedArray.length;i++){
+            num = Integer.parseInt(splitSecondHalfExpectedArray[i]);
+            if(1 <= num && num <= 10){
                 numInRangeActual[i] = true;
             }
             newActualString += "\n" + numInRangeActual[i];
         }
 
-
         //: Then
         Assert.assertEquals("Strings are same",ExpectedString,newActualString);
-
 
     }
 
