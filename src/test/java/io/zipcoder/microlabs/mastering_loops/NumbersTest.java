@@ -1,68 +1,64 @@
 package io.zipcoder.microlabs.mastering_loops;
 
-import org.junit.Assert;
-import org.junit.Test;
 
-public class NumbersTest {
+public class Numbers {
 
-    //test push fix
+    public String oneToTen(){
+        String output = "*** Output ***\noneToTen()";
+        for(int i = 1; i< 11; i++){
+            output += "\n"+ i;
+        }
 
-    @Test
-    public void oneToTenTest(){
-        //: Given
-        Numbers numbers = new Numbers();
-        String expected = "*** Output ***\noneToTen()\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10";
+        return output;
 
-        //: When
-        String actual = numbers.oneToTen();
-
-        //: Then
-        Assert.assertEquals("The two strings are equal", expected, actual);
     }
 
-    @Test
-    public void oddNumbersTest(){
-        //: Given
+    public String oddNumbers(){
+        String output = "oddNumbers()\n*** Output ***";
+        for(int i = 1; i<21; i++){
+            if(i%2 != 0){
+                output += "\n" + i;
+            }
 
-        //: When
-
-        //: Then
+        }
+        return output;
     }
 
-    @Test
-    public void squaresTest(){
-        //: Given
+    public String squares(){
+        String output = "squares()\n*** Output ***";
+        for(int i = 1; i<11; i++){
+            output += "\n" + i*i;
 
-        //: When
 
-        //: Then
+        }
+        return output;
     }
 
-    @Test
-    public void random4Test(){
-        //: Given
+    public String random4(){
+        String output = "random4()\n*** Output ***";
+        for(int i = 0; i<4; i++){
+            output += "\n" + (int)((Math.random()*9)+1);
 
-        //: When
 
-        //: Then
+        }
+        return output;
     }
 
-    @Test
-    public void evenTest(){
-        //: Given
-
-        //: When
-
-        //: Then
+    public String even(int n){
+        String output = "even(" + n + ")\n*** Output ***";
+        for(int i = 1; i<n; i++){
+            if(i%2 == 0) {
+                output += "\n" + i;
+            }
+        }
+        return output;
     }
 
-    @Test
-    public void powersTest(){
-        //: Given
-
-        //: When
-
-        //: Then
+    public String powers(int n) {
+        String output = "powers("+n+")\n*** Output ***";
+        for (int i = 1; i <= n; i++) {
+            output += "\n" + (int) Math.pow(2, i);
+        }
+        return output;
     }
-
 }
