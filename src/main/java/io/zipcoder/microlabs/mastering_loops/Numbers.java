@@ -3,16 +3,12 @@ package io.zipcoder.microlabs.mastering_loops;
 
 public class Numbers {
 
-    // "*** Output ***\noneToTen()\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10"
-
-
-
-        public String oneToTen () {
-            String output = "*** Output ***\noneToTen()";
-            for (int i = 1; i <= 10; i++)
+      public String oneToTen () {
+          String output = "*** Output ***\noneToTen()";
+          for (int i = 1; i <= 10; i++)
                 output += "\n" + i;
-            return output;
-        }
+          return output;
+      }
 
 
     public String oddNumbers() {
@@ -32,9 +28,6 @@ public class Numbers {
         return output;
     }
 
-   /* public String random4() {
-        return "";
-  }*/
 
 
     public String even(int n) {
