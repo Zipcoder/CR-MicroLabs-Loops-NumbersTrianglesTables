@@ -19,7 +19,7 @@ public class Shapes {
     public String tableSquare()
     {/*n the class Shapes, complete the method called tableSquare()
         so that it uses nested loops to produce a 4x4 table square.*/
-        String output = "tableSquare()\n*** Output ***";
+        String output = "tableSquare()\n*** Output ***\nA 4x4 table square";
         for (int i=1; i<=4; i++)
         {
             output += "\n";
@@ -33,7 +33,10 @@ public class Shapes {
         return output;
     }
 
-    public String tableSquares(int n){
+    public String tableSquares(int n)
+    {/*In the class Shapes, complete the method called tableSquare()
+        so that it uses nested loops to produce a 4x4 table square.*/
+
         return "";
     }
 }
