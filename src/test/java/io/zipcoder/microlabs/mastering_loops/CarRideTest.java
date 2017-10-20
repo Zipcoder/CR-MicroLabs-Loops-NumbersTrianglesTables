@@ -8,16 +8,14 @@ import java.util.Scanner;
 
 public class CarRideTest {
 
-/*
     @Test
     public void areWeThereYetRideTest_InputIsTrue_ShouldEqualGood(){
         //: Given
         CarRide carRide = new CarRide();
-        boolean bool = true;
         String expected = "Good!";
 
         //: When
-        String actual = carRide.areWeThereYetRide(bool);
+        String actual = carRide.areWeThereYetRide("Yes");
 
         //: Then
         Assert.assertEquals(actual, expected);
@@ -27,13 +25,12 @@ public class CarRideTest {
     public void areWeThereYetRideTest_InputIsNo_ShouldEqualLoopLoopGood(){
         //: Given
         CarRide carRide = new CarRide();
-        Scanner scanner  = new Scanner("No");
         String expected = "Are we there yet?";
 
         //: When
-        String actual = carRide.areWeThereYetRide(carRide.areWeThereYetInput(scanner));
+        String actual = carRide.areWeThereYetRide("No");
 
         //: Then
         Assert.assertEquals(actual, expected);
-    } */
+    }
 }
