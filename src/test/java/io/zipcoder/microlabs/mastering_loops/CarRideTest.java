@@ -9,10 +9,10 @@ public class CarRideTest {
 
         //: Given
         CarRide carRide = new CarRide();
-        String expected1 = "Are we there yet?";
+        String expected1 = "Good!";
 
         //: When
-        String actual1 = carRide.areWeThereYetTest();
+        String actual1 = carRide.areWeThereYetTest("Yes");
 
         //: Then
         Assert.assertEquals("The two strings are equal", expected1, actual1);
@@ -20,14 +20,14 @@ public class CarRideTest {
     }
 
     @Test
-    public void areWeThereYet() {
+    public void areWeThereYet2() {
 
         //: Given
         CarRide carRide = new CarRide();
-        String expected2 = "Good!";
+        String expected2 = "No";
 
         //: When
-        String actual2 = carRide.areWeThereYetTest();
+        String actual2 = carRide.areWeThereYetTest("No");
 
         //: Then
         Assert.assertEquals("The two strings are equal", expected2, actual2);
