@@ -10,17 +10,10 @@ public class CarRideTest {
     public void areWeThereYetYesTest(){
         //: Given
         CarRide carride = new CarRide();
-
-
         String yesExpected = "Good!";
 
-
-
         //: When
-
         String yesActual = carride.areWeThereYet("Yes");
-
-
 
         //: Then
         Assert.assertEquals("Yes",yesExpected,yesActual);
@@ -31,20 +24,14 @@ public class CarRideTest {
     public void areWeThereYetNoTest(){
         //: Given
         CarRide carride = new CarRide();
-
-
-
         String noExpected = "Are we there yet?";
 
 
         //: When
-
-
         String noActual = carride.areWeThereYet("");
 
 
         //: Then
-
         Assert.assertEquals("No",noExpected,noActual);
 
     }
