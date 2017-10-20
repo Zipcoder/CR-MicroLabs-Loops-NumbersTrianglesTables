@@ -21,23 +21,32 @@ public class NumbersTest {
     @Test
     public void oddNumbersTest(){
         //: Given
+        Numbers numbers = new Numbers();
+        String expected = "*** Output ***\noddNumbers()\n1\n3\n5\n7\n9\n11\n13\n15\n17\n19";
 
         //: When
+        String actual = numbers.oddNumbers();
 
         //: Then
+        Assert.assertEquals("The numbers are odd", expected, actual);
     }
 
     @Test
     public void squaresTest(){
         //: Given
+        Numbers numbers = new Numbers();
+        String expected = "*** Output ***\nsquares()\n1\n4\n9\n16\n25\n36\n49\n64\n81\n100";
 
         //: When
+        String actual = numbers.squares();
 
         //: Then
+        Assert.assertEquals("The numbers are square", expected, actual);
     }
 
+    //Skip
     @Test
-    public void random4Test(){
+    public void random4Test() {
         //: Given
 
         //: When
@@ -48,19 +57,28 @@ public class NumbersTest {
     @Test
     public void evenTest(){
         //: Given
+        Numbers numbers = new Numbers();
+        String expected = "*** Output ***\neven()\n2\n4\n6\n8\n10\n12\n14\n16\n18";
 
         //: When
+        String actual = numbers.even(20);
 
         //: Then
+        Assert.assertEquals("The numbers are even", expected, actual);
+
     }
 
     @Test
     public void powersTest(){
         //: Given
+        Numbers numbers = new Numbers();
+        String expected = "*** Output ***\npowers()\n2\n4\n8\n16\n32\n64\n128\n256";
 
         //: When
+        String actual = numbers.powers(8);
 
         //: Then
+        Assert.assertEquals("The numbers are powered up!", expected, actual);
     }
 
 }
