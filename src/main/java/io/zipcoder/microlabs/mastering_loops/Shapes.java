@@ -27,16 +27,16 @@ public class Shapes {
         return output;
     }
 
-    public String tableSquares(int n){
-        String output = "tableSquares(6)\n***Output***";
+    public String tableSquares(int input){
+        String output = "tableSquares(" + input + ")\n***Output***";
 
-        for(int i = 1; i <= n; i++){
+        for(int row = 1; row <= input; row++){
             output += "\n|";
-            for(int j = 1; j <= n; j++){
-                int lastIntColumn = j*n;
+            for(int col = 1; col <= input; col++){
+                int lastIntColumn = col*input;
                 String lastStrColumn = "" + lastIntColumn;
                 int columnIntWidth = lastStrColumn.length();
-                output += String.format("%" + (columnIntWidth + 1) + "d |", (i*j));
+                output += String.format("%" + (columnIntWidth + 1) + "d |", (row*col));
             }
         }
         return output;
