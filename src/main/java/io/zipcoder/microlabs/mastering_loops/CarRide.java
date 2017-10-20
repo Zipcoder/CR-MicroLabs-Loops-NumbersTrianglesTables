@@ -4,21 +4,18 @@ import java.util.Scanner;
 
 public class CarRide {
 
+
     public String areWeThereYet(Scanner scan){
         String question = "Are we there yet?";
         String response = "";
-        String conversation = question;
-        while(!"Yes".equals(response)) {
+        do {
             response = scan.nextLine();
-            conversation += "\n" + response;
-            if ("Yes".equals(response)) {
-                conversation += "\nGood!";
-            } else {
-                conversation += "\n" + question;
-            }
-        }
-        return conversation;
+            System.out.println(question);
+        } while(!"Yes".equals(response));
+
+        return "Good!";
     }
+
 
 
 

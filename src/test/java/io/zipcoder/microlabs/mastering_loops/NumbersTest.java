@@ -52,16 +52,13 @@ public class NumbersTest {
         // but they seemed to be comparing it to the actual string \d
         // does not seem to work with ^[0-9] either
         String expectedBeginning = "random4()\n*** Output ***";
-        int numNumbersExpected = 4; // number of random numbers expected
 
         //: When
         String actual = numbers.random4();
         String actualBeginning = actual.substring(0,expectedBeginning.length());
-        int numNumbersActual = numbers.numberArray.length;
 
         //: Then
         Assert.assertEquals("The two strings are equal", expectedBeginning, actualBeginning);
-        Assert.assertEquals("The two number arrays are the same length", numNumbersExpected, numNumbersActual); // not supposed to have more than one Assert in a unit test, but didn't know how else to test the numbers part
     }
 
     @Test

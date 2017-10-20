@@ -5,7 +5,6 @@ import java.util.Random;
 
 public class Numbers {
 
-    public int[] numberArray = new int[4];
 
     public String oneToTen(){
         String numberList = "*** Output ***\noneToTen()";
@@ -42,7 +41,6 @@ public class Numbers {
         for(int i = 0; i < 4; i++) {
             int randInt = rand.nextInt(10);
             numberList += "\n" + randInt;
-            numberArray[i] = randInt;
         }
 
         return numberList;

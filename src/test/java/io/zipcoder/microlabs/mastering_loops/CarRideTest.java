@@ -14,7 +14,7 @@ public class CarRideTest {
         CarRide testCarRide = new CarRide();
         String input = "No\nSpoons\nYes";
         Scanner testScan = new Scanner(input);
-        String expected = "Are we there yet?\nNo\nAre we there yet?\nSpoons\nAre we there yet?\nYes\nGood!";
+        String expected = "Good!";
 
         //: When
         String actual = testCarRide.areWeThereYet(testScan);
