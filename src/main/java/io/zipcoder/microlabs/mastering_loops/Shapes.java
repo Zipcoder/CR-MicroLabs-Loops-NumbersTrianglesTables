@@ -55,7 +55,7 @@ public class Shapes {
                         output += " " + product + " |";
                     }
                 } else {
-                    output += " " + product + " |";
+                    output += " " + product + " " + "|";
                 }
             }
         }
