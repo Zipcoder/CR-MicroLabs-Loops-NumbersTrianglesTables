@@ -21,42 +21,46 @@ public class Shapes {
                         "A 4 x 4 table square";
 
         for(int x = 1;x <=4;x++){
+
             output += "\n|";
             for(int y = 1; y <=4;y++){
                 int product = x*y;
-                if(product <10)
-                    output += "  "+ product + " |";
-                else if (product >=10){
+                if(y!=1){
+                    if(product <10)
+                        output += "  "+ product + " |";
+                    else {
+                        output += " " + product + " |";}
+                }else {
                     output += " " + product + " |";
                 }
-                }
+            }
         }
 
         return output;
     }
 
-    public String tableSquares(int n){
+    public String tableSquares(int n) {
         String output = "tableSquares(6)\n" +
-                        "*** Output ***\n"  +
-                        "A 6 x 6 table square";
+                "*** Output ***\n" +
+                "A 6 x 6 table square";
 
-        for (int x = 1; x<=n; x++){
+        for (int x = 1; x <= n; x++) {
             output += "\n|";
-            for(int y = 1; y <= n;y++){
-                int product = x*y;
-
-                if(product <10)
-                output += "  "+ product + " |";
-                else if (product >=10){
+            for (int y = 1; y <= n; y++) {
+                int product = x * y;
+                if (y != 1) {
+                    if (product < 10)
+                        output += "  " + product + " |";
+                    else {
+                        output += " " + product + " |";
+                    }
+                } else {
                     output += " " + product + " |";
                 }
-
-
-
             }
         }
 
-
         return output;
+
     }
 }
