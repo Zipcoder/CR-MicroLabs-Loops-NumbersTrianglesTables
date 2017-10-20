@@ -6,10 +6,10 @@ public class Shapes {
     public String triangle(){
         String output = "triangle()\n*** Output ***";
         String star = "*";
-        for (int column = 0; column < 5; column++) {
+        for (int row = 0; row < 5; row++) {
             output += "\n" + star;
-            for (int row = 0; row < 1; row++) {
-                star += "*";
+            for (int column = 0; column < row; column++) {
+                output += star;
             }
          }
         return output;

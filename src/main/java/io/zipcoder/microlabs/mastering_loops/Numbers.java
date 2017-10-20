@@ -14,8 +14,10 @@ public class Numbers {
 
     public String oddNumbers(){
         String output = "oddNumbers()\n*** Output ***";
-        for (int i = 1; i < 20; i+=2) {
-            output += "\n" + i;
+        for (int i = 1; i < 20; i++) {
+            if (i % 2 == 1) {
+                output += "\n" + i;
+            }
         }
         return output;
     }
