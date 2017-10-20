@@ -33,7 +33,10 @@ public class Shapes {
         for(int i = 1; i <= n; i++){
             output += "\n|";
             for(int j = 1; j <= n; j++){
-                output += String.format("%3d |", (i*j));
+                int lastIntColumn = j*n;
+                String lastStrColumn = "" + lastIntColumn;
+                int columnIntWidth = lastStrColumn.length();
+                output += String.format("%" + (columnIntWidth + 1) + "d |", (i*j));
             }
         }
         return output;
