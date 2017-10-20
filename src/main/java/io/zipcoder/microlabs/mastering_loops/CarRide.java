@@ -9,7 +9,6 @@ public class CarRide {
         if("yes".equalsIgnoreCase(input)){
             output = "Good!";
         }
-
         return output;
     }
 
