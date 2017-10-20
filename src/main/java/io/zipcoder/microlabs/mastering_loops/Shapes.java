@@ -5,7 +5,7 @@ public class Shapes {
 
 // This way is better... just saying -______-
 
-
+//    Version 0.1 - Single for loop
 //    public String triangle(){
 //        String output = "triangle()\n*** Output ***";
 //
@@ -19,19 +19,38 @@ public class Shapes {
 //        return output;
 //    }
 
+    // Version 0.2 - basically a fake nested for loop
+//    public String triangle(){
+//        String output = "triangle()\n*** Output ***";
+//
+//        String star = "*";
+//
+//        for (int x = 0; x < 5; x++) {
+//            output += "\n" + star;
+//            for (int y = 0; y < 1; y ++) {
+//                //output += "\n" + star;
+//                star+="*";
+//            }
+//
+//
+//        }
+//
+//        return output;
+//    }
+
+    // Real nested for loop
     public String triangle(){
         String output = "triangle()\n*** Output ***";
 
         String star = "*";
 
-        for (int x = 0; x < 5; x++) {
-            output += "\n" + star;
-            for (int y = 0; y < 1; y ++) {
-                //output += "\n" + star;
-                star+="*";
+        for (int row = 0; row < 5; row++) {
+            output += "\n";
+
+            for (int column = 0; column <= row; column ++) {
+                output += star;
+                //star+="*";
             }
-
-
         }
 
         return output;
