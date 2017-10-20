@@ -16,10 +16,10 @@ public class CarRideTest {
         String expected = "Good!";
 
         //When
-        String actual1 = carRide.areWeThereYet(in);
+        String actual = carRide.areWeThereYet(in);
 
         //Then
-        Assert.assertEquals("The strings are equal", expected, actual1);
+        Assert.assertEquals("The strings are equal", expected, actual);
 
     }
 

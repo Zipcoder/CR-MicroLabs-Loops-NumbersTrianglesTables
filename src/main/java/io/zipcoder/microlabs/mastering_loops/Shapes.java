@@ -21,8 +21,8 @@ public class Shapes {
         for (int i=1; i<=4; i++){
             output+="\n| "+i+" |";
             for(int j=2;j<=4; j++){
-                String fill="  "+i*j+" ";
-                output+=fill.substring(fill.length()-4)+"|";
+
+                output+=String.format("%3d |",i*j);
             }
         }
 
@@ -30,12 +30,12 @@ public class Shapes {
     }
 
     public String tableSquares(int n){
-        String output = "tableSquares("+n+")\n*** Output ***\nA 6 x 6 table square";
+        String output = "tableSquares("+n+")\n*** Output ***\nA "+n+" x "+n+" table square";
+        String space =n*n+"";
         for (int i=1;i<=n;i++){
-            output+="\n| "+i+" |";
+            output+="\n|"+String.format("%"+((n+"").length()+1)+"d |",i);
             for (int j=2;j<=n; j++){
-                String fill="  "+i*j+" ";
-                output+=fill.substring(fill.length()-4)+"|";
+                output+=String.format("%"+(space.length()+1)+"d |",i*j);
             }
         }
         return output;
