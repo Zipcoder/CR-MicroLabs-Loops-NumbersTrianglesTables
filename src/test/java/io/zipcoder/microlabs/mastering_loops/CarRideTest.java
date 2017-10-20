@@ -3,6 +3,7 @@ package io.zipcoder.microlabs.mastering_loops;
 
 import org.junit.Assert;
 import org.junit.Test;
+import java.util.Scanner;
 
 public class CarRideTest {
 
@@ -11,19 +12,15 @@ public class CarRideTest {
 
         //Given
         CarRide carRide = new CarRide();
-        String expected1 = "Good!";
-        //String expected2 = "Spoons";
-        //String expected3 = "Good!";
+        Scanner in = new Scanner("No\nSpoons\nYes");
+        String expected = "Good!";
 
         //When
-        String actual1 = carRide.areWeThereYet("No\nSpoons\nYes");
-        //String actual2 = carRide.areWeThereYet("Spoons");
-        //String actual3 = carRide.areWeThereYet("Yes");
+        String actual1 = carRide.areWeThereYet(in);
 
         //Then
-        Assert.assertEquals("The strings are equal", expected1, actual1);
-        //Assert.assertEquals("The strings are equal", expected2, actual2);
-        //Assert.assertEquals("The strings are equal", expected3, actual3);
+        Assert.assertEquals("The strings are equal", expected, actual1);
+
     }
 
 

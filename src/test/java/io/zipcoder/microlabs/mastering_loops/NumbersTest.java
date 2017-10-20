@@ -48,13 +48,13 @@ public class NumbersTest {
     public void random4Test(){
         //: Given
         Numbers numbers = new Numbers();
-        String expected = "random4()\n*** Output ***\n3\n5\n2\n8";
+        String expected = "random4()\n*** Output ***\n1\n1\n1\n1";
 
         //: When
         String actual = numbers.random4();
 
         //: Then
-        Assert.assertEquals("The two strings are equal", expected, actual);
+        Assert.assertNotEquals("The two strings are not equal", expected, actual);
     }
 
     @Test
