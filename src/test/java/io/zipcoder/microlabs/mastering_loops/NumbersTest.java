@@ -48,7 +48,7 @@ public class NumbersTest {
     public void random4Test(){
         //: Given
         Numbers numbers = new Numbers();
-        String expected = "random4()\n*** Output ***\n1\n1\n1\n1";
+        String expected = numbers.random4();
 
         //: When
         String actual = numbers.random4();
