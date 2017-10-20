@@ -36,7 +36,20 @@ public class Shapes {
     public String tableSquares(int n)
     {/*In the class Shapes, complete the method called tableSquare()
         so that it uses nested loops to produce a 4x4 table square.*/
+        String output = "tableSquares(6)\n*** Output ***\nA 6x6 table square";
+        int fieldWidth;
+        String fieldWidthAsString;
+        for (int i=1; i<=n; i++)//col
+        {
+            output += "\n" + "|" ;
+            for (int j=1; j<=n; j++)//row
+            {
+                fieldWidthAsString = "" + j*n;
+                fieldWidth = fieldWidthAsString.length() + 1;
+                output += String.format("%"+fieldWidth+"d",(i*j)) + " " + "|";
+            }
 
-        return "";
+        }
+        return output;
     }
 }
