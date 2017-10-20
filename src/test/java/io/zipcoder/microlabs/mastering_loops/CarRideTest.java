@@ -4,6 +4,8 @@ package io.zipcoder.microlabs.mastering_loops;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.Scanner;
+
 public class CarRideTest {
     @Test
     public void areWeThereTest_InputIsYes_ShouldReturnTrue() {
@@ -23,9 +25,33 @@ public class CarRideTest {
         CarRide car = new CarRide();
 
         //: When
-        boolean actual2 = car.areWeThere("adlf");
+        boolean actual2 = car.areWeThere("Spoon");
 
         //: Then
         Assert.assertFalse(actual2);
+    }
+
+    @Test
+    public void returnYesAnswerTest() {
+        //: Given
+        CarRide car = new CarRide();
+        String expected = "Good";
+        //: When
+        String actual = car.returnAnswer(car.areWeThere("Yes"));
+
+        //: Then
+        Assert.assertEquals(expected,actual);
+    }
+
+    @Test
+    public void returnOtherAnswerTest() {
+        //: Given
+        CarRide car = new CarRide();
+        String expected = "Are we there yet?";
+        //: When
+        String actual = car.returnAnswer(car.areWeThere("Spoon"));
+
+        //: Then
+        Assert.assertEquals(expected,actual);
     }
 }
