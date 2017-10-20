@@ -21,19 +21,27 @@ public class NumbersTest {
     @Test
     public void oddNumbersTest(){
         //: Given
+        Numbers numbers = new Numbers();
+        String expected = "*** Output *** \noddnumbers()\n1\n3\n5\n7\n9\n11\n13\n15\n17\n19";
 
         //: When
+        String actual = numbers.oddNumbers();
 
         //: Then
+        Assert.assertEquals(expected, actual);
     }
 
     @Test
     public void squaresTest(){
         //: Given
+        Numbers numbers = new Numbers();
+        String expected = "*** Output ***\nsquares()\n1\n4\n9\n16\n25\n36\n49\n64\n81\n100";
 
         //: When
+        String actual = numbers.squares();
 
         //: Then
+        Assert.assertEquals(expected, actual);
     }
 
     @Test

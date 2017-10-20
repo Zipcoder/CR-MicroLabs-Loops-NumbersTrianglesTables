@@ -4,15 +4,34 @@ package io.zipcoder.microlabs.mastering_loops;
 public class Numbers {
 
     public String oneToTen(){
-        return "";
+
+        String output = "*** Output ***\noneToTen()";
+        for(int i = 1; i <= 10; i++){
+            output += "\n" + i;
+        }
+        return output;
     }
 
     public String oddNumbers(){
-        return "";
+
+        String oddnumbers = "*** Output *** \noddnumbers()";
+        for(int i = 1; i <= 20; i++){
+            if(i%2 !=0){
+                oddnumbers += "\n" + i;
+            }
+        }
+
+        return oddnumbers;
     }
 
     public String squares(){
-        return "";
+
+        String numsquare = "*** Output ***\nsquares()";
+        for(int i = 1; i <=10; i++){
+            numsquare += "\n" + i*i;
+        }
+
+        return numsquare;
     }
 
     public String random4(){
