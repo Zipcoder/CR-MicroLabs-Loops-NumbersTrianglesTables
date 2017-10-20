@@ -26,14 +26,11 @@ public class CarRideTest {
         //Given:
         CarRide carRide = new CarRide();
         String expectedNo = "No";
-        String expectedOther = "Spoon";
 
         //When:
         String actualNo = carRide.areWeThereYet("No");
-        String actualOther = carRide.areWeThereYet("Spoon");
 
         //Then:
         Assert.assertEquals("The strings are equal!", expectedNo, actualNo);
-        Assert.assertEquals("The strings are equal", expectedOther, actualOther);
     }
 }
