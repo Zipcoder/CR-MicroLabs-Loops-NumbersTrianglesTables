@@ -49,7 +49,8 @@ public class Numbers {
     public String powers(int n){
         String output = "powers(8)\n*** Output ***";
         for (int x = 1; x <= 8; x++) {
-            output += "\n"+(int) Math.pow(2,x);
+            int power = (int) Math.pow(2,x);
+            output += "\n"+power;
         }
 
         return output;
