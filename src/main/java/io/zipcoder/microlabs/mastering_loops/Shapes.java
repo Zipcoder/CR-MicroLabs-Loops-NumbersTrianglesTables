@@ -18,11 +18,13 @@ public class Shapes {
 
     public String tableSquare() {
         String output = "tableSquare()\n*** Output ***\nA 4 x 4 table square";
-        String width  =  4 * 4 +"";
+        //String width  =  4 * 4 +"";
         for (int x = 1; x <= 4; x++) {
             output += "\n| " + x + " |";
             for (int i = 2; i <= 4; i++) {
-                output += String.format("%" + (width.length() + 1) + "d |", x * i);
+                output += String.format("%3d |", x * i);
+                //("%" + (width.length() + 1) + "d |", x * i);
+                //could also do "%3d |", x * i
             }
         }
         return output;
