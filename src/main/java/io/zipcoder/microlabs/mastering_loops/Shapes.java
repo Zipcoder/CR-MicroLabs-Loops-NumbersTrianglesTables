@@ -34,9 +34,10 @@ public class Shapes {
     }
 
     public String tableSquares(int n)
-    {/*In the class Shapes, complete the method called tableSquare()
-        so that it uses nested loops to produce a 4x4 table square.*/
-        String output = "tableSquares(6)\n*** Output ***\nA 6x6 table square";
+    {/*In the class Shapes, extend your answer to the last question
+        produce a method that will return string of characters out og
+        n x n table square.*/
+        String output = "tableSquares("+n+")\n*** Output ***\nA "+n+"x"+n+" table square";
         int fieldWidth;
         String fieldWidthAsString;
         for (int i=1; i<=n; i++)//col
