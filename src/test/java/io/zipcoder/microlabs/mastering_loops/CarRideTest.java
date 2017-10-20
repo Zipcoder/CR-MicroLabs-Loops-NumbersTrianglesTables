@@ -24,7 +24,7 @@ public class CarRideTest {
     public void AreWeThereYetTest_Pass() {
         //: Given
         CarRide carRide = new CarRide();
-        boolean expected = false;
+        boolean expected = true;
 
         //: When
         boolean actual = carRide.areWeThereYet("Yes");
