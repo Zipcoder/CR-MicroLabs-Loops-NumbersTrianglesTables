@@ -14,7 +14,7 @@ public class CarRideTest {
         String expected = "Good!";
 
         //:When
-        String actual = carRide.areWeThereYetTest("yes");
+        String actual = carRide.areWeThereYet("yes");
 
         //:Then
         Assert.assertEquals("The two strings are equal", expected, actual);
@@ -27,7 +27,7 @@ public class CarRideTest {
         String expected = "Are we there yet?";
 
            //:when
-        String actual = carRide.areWeThereYetTest("No");
+        String actual = carRide.areWeThereYet("No");
 
         //: Then
 
