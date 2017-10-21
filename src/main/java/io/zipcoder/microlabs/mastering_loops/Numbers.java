@@ -4,30 +4,30 @@ package io.zipcoder.microlabs.mastering_loops;
 public class Numbers {
 
     public String oneToTen(){
-        String output = "*** Output ***\noneToTen()\n";
-        for (int i = 1; i <= 10; i++) {
-            output += i + "\n";
+        String oneToTenOutput = "oneToTen()\n*** Output ***\n";
+        for (int number = 1; number <= 10; number++) {
+            oneToTenOutput += number + "\n";
         }
-        output = output.trim();
-        return output;
+        oneToTenOutput = oneToTenOutput.trim();
+        return oneToTenOutput;
     }
 
     public String oddNumbers(){
-        String output = "oddNumbers()\n*** Output ***\n";
-        for (int i = 1; i < 20; i += 2) {
-            output += i + "\n";
+        String oddNumbersOutput = "oddNumbers()\n*** Output ***\n";
+        for (int oddNumber = 1; oddNumber < 20; oddNumber += 2) {
+            oddNumbersOutput += oddNumber + "\n";
         }
-        output = output.trim();
-        return output;
+        oddNumbersOutput = oddNumbersOutput.trim();
+        return oddNumbersOutput;
     }
 
     public String squares(){
-        String output = "squares()\n*** Output ***\n";
-        for (int i = 1; i <= 10; i++) {
-            output += i * i + "\n";
+        String squaresOutput = "squares()\n*** Output ***\n";
+        for (int base = 1; base <= 10; base++) {
+            squaresOutput += base * base + "\n";
         }
-        output = output.trim();
-        return output;
+        squaresOutput = squaresOutput.trim();
+        return squaresOutput;
     }
 
     public String random4(){
@@ -36,20 +36,19 @@ public class Numbers {
     }
 
     public String even(int n){
-        String output = "even(" + n + ")\n*** Output ***\n";
-        for (int i = 2; i < n; i += 2) {
-            output += i + "\n";
+        String evenNumbersOutput = "even(" + n + ")\n*** Output ***\n";
+        for (int evenNumber = 2; evenNumber < n; evenNumber += 2) {
+            evenNumbersOutput += evenNumber + "\n";
         }
-        output = output.trim();
-        return output;
+        evenNumbersOutput = evenNumbersOutput.trim();
+        return evenNumbersOutput;
     }
 
     public String powers(int n){
         String output = "powers(" + n + ")\n*** Output ***\n";
-        for (int i = 1; i <= n; i++) {
-            double dExponentiation = Math.pow(2, i);
-            int iExponentiation = (int) dExponentiation;
-            output +=  iExponentiation + "\n";
+        for (int exponent = 1; exponent <= n; exponent++) {
+            int exponentiation = (int) Math.pow(2, exponent);
+            output +=  exponentiation + "\n";
         }
         output = output.trim();
         return output;

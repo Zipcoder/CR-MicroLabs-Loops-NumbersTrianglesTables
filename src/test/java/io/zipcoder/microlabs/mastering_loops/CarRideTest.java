@@ -3,35 +3,38 @@ package io.zipcoder.microlabs.mastering_loops;
 
 import org.junit.Assert;
 import org.junit.Test;
-import sun.misc.IOUtils;
 
-import java.io.ByteArrayInputStream;
-import java.io.InputStream;
-import java.util.Scanner;
 
 public class CarRideTest {
+    CarRide carRide = new CarRide();
+    String userInput;
+    String expected;
+    String actual;
 
     @Test
-    public void areWeThereYetTest(){
+    public void areWeThereYetTestPass(){
         //: Given
-        CarRide carRide = new CarRide();
-        String expected = "Good!";
-
-
-
-        String input = "Yes";
-        InputStream in = new ByteArrayInputStream(input.getBytes());
-
-
-        String myString = IOUtils.toString(in, "UTF-8");
-        System.setIn(myString);
-
+        userInput = "yes";
+        expected = "Good";
 
         //: When
-        String actual = carRide.areWeThereYet();
+        actual = carRide.areWeThereYet(userInput);
 
         //: Then
-        Assert.assertEquals("The two strings are equal", expected, actual);
+        Assert.assertEquals("the strings match", expected, actual);
+    }
+
+    @Test
+    public void areWeThereYetTestFail(){
+        //: Given
+        userInput = "No";
+        expected = "Are we there yet?";
+
+        //: When
+        actual = carRide.areWeThereYet(userInput);
+
+        //: Then
+        Assert.assertEquals("the strings match", expected, actual);
     }
 
 }
