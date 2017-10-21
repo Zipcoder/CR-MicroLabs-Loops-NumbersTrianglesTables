@@ -45,13 +45,12 @@ public class Numbers {
     }
 
     public String powers(int n){
-        String output = "powers(" + n + ")\n*** Output ***\n";
+        String powersOutput = "powers(" + n + ")\n*** Output ***\n";
         for (int exponent = 1; exponent <= n; exponent++) {
-            int exponentiation = (int) Math.pow(2, exponent);
-            output +=  exponentiation + "\n";
+            powersOutput +=  (int) Math.pow(2, exponent) + "\n";
         }
-        output = output.trim();
-        return output;
+        powersOutput = powersOutput.trim();
+        return powersOutput;
     }
 
 }
