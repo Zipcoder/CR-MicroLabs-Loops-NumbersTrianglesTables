@@ -20,7 +20,7 @@ public class MainApplication_CarRide {
 
             System.out.println(answer);
 
-        } while(!"Yes".equals(answer));
+        } while(!"Good!".equals(answer));
 
 
     }
