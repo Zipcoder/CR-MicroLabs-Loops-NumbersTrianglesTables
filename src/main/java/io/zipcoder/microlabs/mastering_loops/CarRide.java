@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class CarRide {
 
-git
+
     public String areWeThereYet(String userInput) {
 
         String input = userInput;
