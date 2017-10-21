@@ -1,13 +1,18 @@
 package io.zipcoder.microlabs.mastering_loops;
 
-import org.junit.Assert;
 import org.junit.Test;
 
+
+import org.junit.Assert;
+
 public class NumbersTest {
+
+
 
     @Test
     public void oneToTenTest(){
         //: Given
+         
         Numbers numbers = new Numbers();
         String expected = "*** Output ***\noneToTen()\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10";
 

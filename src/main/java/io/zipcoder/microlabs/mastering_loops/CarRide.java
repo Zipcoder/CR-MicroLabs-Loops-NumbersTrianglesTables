@@ -6,7 +6,7 @@ public class CarRide {
 
     public String areWeThereYet(String answer) {
 
-       while(!"Yes".equals(answer)){
+       while(!"Yes".equalsIgnoreCase(answer)){
            String reply = "Are we there yet?";
            return reply;
 
