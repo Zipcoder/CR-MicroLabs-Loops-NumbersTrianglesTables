@@ -21,19 +21,23 @@ public class NumbersTest {
     @Test
     public void oddNumbersTest(){
         //: Given
-
+Numbers oddNumbers=new Numbers ();
+String expected = "*** Output ***\noddNumbers()\n1\n3\n5\n7\n9\n11\n13\n15\n17\n19";
         //: When
-
+String actual = oddNumbers.oddNumbers();
         //: Then
+Assert.assertEquals("The two strings are equal", expected, actual);
     }
 
     @Test
     public void squaresTest(){
         //: Given
-
+Numbers squares=new Numbers();
+String expected = "squares()\n*** Output ***\n1\n4\n9\n16\n25\n36\n49\n64\n81\n100";
         //: When
-
+String actual = squares.squares();
         //: Then
+Assert.assertEquals("The two strings are equal", expected, actual);
     }
 
     @Test
@@ -48,10 +52,12 @@ public class NumbersTest {
     @Test
     public void evenTest(){
         //: Given
-
+Numbers evenTest=new Numbers();
+String expected = "even(20)\n*** Output ***\n2\n4\n6\n8\n10\n12\n14\n16\n18";
         //: When
-
+String actual = evenTest.even(20);
         //: Then
+Assert.assertEquals("The two strings are equal", expected, actual);
     }
 
     @Test
