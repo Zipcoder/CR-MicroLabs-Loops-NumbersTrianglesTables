@@ -17,7 +17,7 @@ public class MainApplication_CarRide {
             String input = scan.nextLine();
 
             answer = ride.areWeThereYet(input);
-            
+
             System.out.println(answer);
 
         } while(!"Yes".equals(answer));

@@ -6,10 +6,9 @@ public class CarRide {
 
     public String areWeThereYet(String answer) {
 
-       while(!"Yes".equalsIgnoreCase(answer)){
+       if(!"Yes".equalsIgnoreCase(answer)){
            String reply = "Are we there yet?";
            return reply;
-
        }
 
        String user_said_yes = "Good!";
