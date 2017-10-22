@@ -50,7 +50,7 @@ public class ShapesTest {
                 "|  6   | 12   | 18   | 24   | 30   | 36   |";
 
         //: When
-        actual = shapes.tableSquares(6);
+        actual = shapes.tableSquares(65);
 
         //: Then
         Assert.assertEquals("The table squares match", expected, actual);

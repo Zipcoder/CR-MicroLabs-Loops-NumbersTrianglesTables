@@ -22,7 +22,13 @@ public class Shapes {
 
         for (int rows = 1; rows <= 4; rows++) {
             for (int columns = 1; columns <= 4; columns++) {
-                x4table += "|" + stringMethods.padLeft(Integer.toString(rows * columns), 2);
+
+                String cellToFormat = Integer.toString(rows * columns);
+
+                String paddedCell = stringMethods.padLeft(cellToFormat, 3, 2);
+                paddedCell = stringMethods.padRight(paddedCell, 5);
+
+                x4table += "|" + paddedCell;
             }
             x4table += "|\n";
         }
@@ -33,23 +39,21 @@ public class Shapes {
     public String tableSquares(int n){
         /*: spacesToPad must be >= the number of digits in n^2
             looking for ways to fix this
-         */
+        */
 
         String x6table = "tableSquares(" + n + ")\n*** Output ***\nA " + n + "x" + n + " table square\n";
 
         for (int rows = 1; rows <= n; rows++) {
             for (int columns = 1; columns <= n; columns++) {
+
                 String cellToFormat = Integer.toString(rows * columns);
+                int digitsInMaxCell = Integer.toString(n*n).length();
 
-                String paddedLeftString = stringMethods.padLeft(cellToFormat, 3);
-
-                String paddedRightString = stringMethods.padRight(cellToFormat, 3);
-                paddedRightString = paddedRightString.substring(cellToFormat.length());
-
-                String paddedCell = paddedLeftString + paddedRightString;
-                for (int numberOfSpacesToAdd = 1; numberOfSpacesToAdd <= cellToFormat.length(); numberOfSpacesToAdd++) {
-                    paddedCell += " ";
+                String paddedCell = stringMethods.padLeft(cellToFormat, 2, digitsInMaxCell);
+                if (paddedCell == null) {
+                    return "spacesToPad must be >= digitsInMaxCell(" + digitsInMaxCell +"). Please change your arguments.";
                 }
+                paddedCell = stringMethods.padRight(paddedCell, 3);
 
                 x6table += "|" + paddedCell;
             }
