@@ -17,4 +17,12 @@ public class StringMethods {
         return stringToPadRight;
     }
 
+    public static String padLeftAndRight(String stringToPad, int spacesToPadLeft, int spacesToPadRight, int digitsInMaxCell) {
+        String paddedCell = padLeft(stringToPad, spacesToPadLeft, digitsInMaxCell);
+        if (paddedCell == null) {
+            return null;
+        }
+        return padRight(paddedCell, spacesToPadRight);
+    }
+
 }

@@ -48,12 +48,11 @@ public class Shapes {
 
                 String cellToFormat = Integer.toString(rows * columns);
                 int digitsInMaxCell = Integer.toString(n*n).length();
+                String paddedCell = stringMethods.padLeftAndRight(cellToFormat, 3, 2, digitsInMaxCell);
 
-                String paddedCell = stringMethods.padLeft(cellToFormat, 2, digitsInMaxCell);
                 if (paddedCell == null) {
-                    return "spacesToPad must be >= digitsInMaxCell(" + digitsInMaxCell +"). Please change your arguments.";
+                    return "spacesToPadLeft must be >= digitsInMaxCell(" + digitsInMaxCell + "). Change arguments.";
                 }
-                paddedCell = stringMethods.padRight(paddedCell, 3);
 
                 x6table += "|" + paddedCell;
             }
