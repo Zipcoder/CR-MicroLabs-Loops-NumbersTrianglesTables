@@ -28,7 +28,8 @@ public class Shapes {
         for (int i = 1; i <= rows; i++) {
             Square += "|";
             for (int k = 1; k <= rows; k++) {
-                Square += i * k + "|";
+                int cellNumber = i*k;
+                Square += String.format("%3d |", cellNumber);
             }
             if (i < rows) {
                 Square += "\n";
@@ -40,17 +41,27 @@ public class Shapes {
 
     public String tableSquares(int n){
 
-        String Square = "tableSquare()\n*** Output ***\nA " + n + " x " + n + " table square\n";
-        int rows = n;
-        for (int i = 1; i <= rows; i++) {
-            Square += "|";
-            for (int k = 1; k <= rows; k++) {
-                Square += i * k + "|";
+        String Square = "tableSquare("+n+")\n*** Output ***\nA " + n + " x " + n + " table square\n";
+        int userIn = n;
+        for (int row = 1; row <= userIn; row++) {
+            for (int col = 1; col <= userIn; col++) {
+                Square += "|";
+                int number = row * col;
+                String theDigit = Integer.toString(number);
+                int spaceToPad = 3;
+                Square += FormatingMethods.padLeft(theDigit, spaceToPad);
+                //String paddedLeftString = FormatingMethods.padLeft(theDigit, spaceToPad);
+                //String paddedRightString = FormatingMethods.padRight(theDigit, spaceToPad);
+                //String concatenatedStrings = paddedLeftString +paddedRightString;
+
+                //  !!!! not finished  !!!!
+
             }
-            if (i < rows) {
-                Square += "\n";
+            if (row < userIn) {
+                Square += "|\n";
             }
         }
+        Square += "|";
         return Square;
     }
 }
