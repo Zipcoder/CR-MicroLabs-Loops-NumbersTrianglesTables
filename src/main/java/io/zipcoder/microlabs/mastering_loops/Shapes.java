@@ -1,4 +1,5 @@
 package io.zipcoder.microlabs.mastering_loops;
+import java.util.*;
 
 
 public class Shapes {
@@ -24,16 +25,16 @@ public class Shapes {
     public String tableSquare(){
 
         int tableSizeOne = 4;
-        String output = "*** Output ***\nA 4x4 table square\n";
+        String output = "*** Output ***\nA 4x4 table square";
 
         for(int i=1; i<=tableSizeOne; i++){
             int num = i;
-            output += "| " + num + " |";
+            output += "\n" + String.format("|%2d", num);
             for(int j=1; j<=tableSizeOne -1; j++){
                num += i;
-               output += " " + num + " |";
+               output +=  String.format(" |%3d", num);
             }
-            output += "\n";
+            output += " |";
         }
 
         return output;
@@ -41,18 +42,17 @@ public class Shapes {
 
     public String tableSquares(int n){
 
-        String output = "*** Output ***\nA 6x6 table square()\n";
+        String output = "*** Output ***\nA 6x6 table square()";
 
         for(int i=1; i<=n; i++){
             int num = i;
-            output += "| " + num + " |";
-            for(int j=1; j<=n -1; j++){
+            output += "\n" + String.format("|%2d" , num);
+            for(int j=1; j<=n -1; j++) {
                 num += i;
-                output += " " + num + " |";
+                    output += String.format(" |%3d", num);
             }
-            output += "\n";
-        }
-
+            output += " |";
+            }
 
         return output;
     }
