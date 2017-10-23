@@ -34,10 +34,6 @@ public class Shapes {
     }
 
     public String tableSquares(int n){
-        /*: spacesToPad must be >= the number of digits in n^2
-            looking for ways to fix this
-        */
-
         String x6table = "tableSquares(" + n + ")\n*** Output ***\nA " + n + "x" + n + " table square\n";
 
         for (int rows = 1; rows <= n; rows++) {
