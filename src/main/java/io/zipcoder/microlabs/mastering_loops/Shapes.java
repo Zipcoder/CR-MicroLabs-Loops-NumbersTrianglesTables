@@ -24,10 +24,7 @@ public class Shapes {
             for (int columns = 1; columns <= 4; columns++) {
 
                 String cellToFormat = Integer.toString(rows * columns);
-
-                String paddedCell = stringMethods.padLeft(cellToFormat, 3, 2);
-                paddedCell = stringMethods.padRight(paddedCell, 5);
-
+                String paddedCell = stringMethods.padLeft(cellToFormat, 2, 2);
                 x4table += "|" + paddedCell;
             }
             x4table += "|\n";
@@ -48,7 +45,7 @@ public class Shapes {
 
                 String cellToFormat = Integer.toString(rows * columns);
                 int digitsInMaxCell = Integer.toString(n*n).length();
-                String paddedCell = stringMethods.padLeftAndRight(cellToFormat, 3, 2, digitsInMaxCell);
+                String paddedCell = stringMethods.padLeftAndRight(cellToFormat, 2, 1, digitsInMaxCell);
 
                 if (paddedCell == null) {
                     return "spacesToPadLeft must be >= digitsInMaxCell(" + digitsInMaxCell + "). Change arguments.";
