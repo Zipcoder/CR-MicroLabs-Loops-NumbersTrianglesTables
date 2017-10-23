@@ -6,28 +6,28 @@ import org.junit.Test;
 public class CarRideTest {
 
     @Test
-    public void testInputYesTest() {
+    public void testAreWeThereYet() {
         // Given
         String userInput = "Yes";
         String expected = "Good!";
         CarRide carRide = new CarRide();
 
         // When
-        String actual = carRide.testInput(userInput);
+        String actual = carRide.areWeThereYet(userInput);
 
         // Then
         Assert.assertEquals("The strings are not the same",expected, actual);
     }
 
     @Test
-    public void testInputOtherTest() {
+    public void testAreWeThereYet2() {
         // Given
         String userInput = "Other";
         String expected = "";
         CarRide carRide = new CarRide();
 
         // When
-        String actual = carRide.testInput(userInput);
+        String actual = carRide.areWeThereYet(userInput);
 
         // Then
         Assert.assertEquals("The strings are not the same",expected, actual);
