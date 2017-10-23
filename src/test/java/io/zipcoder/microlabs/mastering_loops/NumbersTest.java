@@ -43,12 +43,27 @@ public class NumbersTest {
     }
 
     @Test
-    public void random4Test(){
+    public void random4TestYes(){
         //: Given
+            Numbers randomNum= new Numbers();
+            String expected= "random4()\n*** Output *** \n3\n5\n2\n8";
 
         //: When
-
+            String actual= randomNum.random4("\n3\n5\n2\n8");
         //: Then
+            Assert.assertEquals("Success",expected,actual);
+    }
+    @Test
+    public  void random4TestNo(){
+        //: Given
+        Numbers randomNum= new Numbers();
+        String expected= "not \n3\n5\n2\n8";
+
+        //: When
+        String actual= randomNum.random4("");
+        //: Then
+        Assert.assertEquals("Success",expected,actual);
+
     }
 
     @Test
