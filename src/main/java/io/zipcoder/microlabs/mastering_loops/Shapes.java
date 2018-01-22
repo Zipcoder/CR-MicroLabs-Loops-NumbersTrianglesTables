@@ -41,21 +41,15 @@ public class Shapes {
 
     public String tableSquares(int n){
 
-        String Square = "tableSquare("+n+")\n*** Output ***\nA " + n + " x " + n + " table square\n";
+        String Square = "ableSquare("+n+")\n*** Output ***\nA " + n + " x " + n + " table square\n";
         int userIn = n;
         for (int row = 1; row <= userIn; row++) {
             for (int col = 1; col <= userIn; col++) {
                 Square += "|";
                 int number = row * col;
                 String theDigit = Integer.toString(number);
-                int spaceToPad = 3;
-                Square += FormatingMethods.padLeft(theDigit, spaceToPad);
-                //String paddedLeftString = FormatingMethods.padLeft(theDigit, spaceToPad);
-                //String paddedRightString = FormatingMethods.padRight(theDigit, spaceToPad);
-                //String concatenatedStrings = paddedLeftString +paddedRightString;
-
-                //  !!!! not finished  !!!!
-
+                int padsTocell = theDigit.length()+ 1;
+                Square += FormatingMethods.paddingLeftandRight(1, 2 , theDigit);
             }
             if (row < userIn) {
                 Square += "|\n";
