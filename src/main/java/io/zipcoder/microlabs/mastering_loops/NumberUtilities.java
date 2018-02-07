@@ -60,9 +60,12 @@ public class NumberUtilities {
     public static String getExponentiations(int start, int stop, int step, int exponent) {
         StringBuilder num = new StringBuilder();
 
-        for(int i = start; i < stop; i++) {
-            num.append(i);
+        for(int i = start; i < stop; i += step) {
+            int s = (int) Math.pow(i, exponent);
+            num.append(s);
         }
         return num.toString();
+
+
     }
 }

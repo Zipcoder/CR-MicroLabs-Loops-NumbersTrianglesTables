@@ -2,6 +2,7 @@ package io.zipcoder.microlabs.mastering_loops;
 
 import java.util.Scanner;
 
+import static io.zipcoder.microlabs.mastering_loops.NumberUtilities.getExponentiations;
 import static io.zipcoder.microlabs.mastering_loops.NumberUtilities.getSquareNumbers;
 
 /**
@@ -9,6 +10,8 @@ import static io.zipcoder.microlabs.mastering_loops.NumberUtilities.getSquareNum
  */
 public class MainApp {
     public static void main(String[] args) {
-        System.out.println(getSquareNumbers(5, 20, 5));
+        System.out.println(getExponentiations(5, 20, 5, 2));
+
+
     }
 }
