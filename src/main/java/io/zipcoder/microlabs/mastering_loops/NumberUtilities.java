@@ -3,14 +3,15 @@ package io.zipcoder.microlabs.mastering_loops;
 
 public class NumberUtilities {
     public static String getEvenNumbers(int start, int stop) {
-        StringBuilder sb = new StringBuilder();
-        for (int i=start;i < stop;i++) {
-            if (i % 2 == 0)
-                sb.append(i);
-        }
-        return sb.toString();
+        return getRange(start + (start % 2), stop, 2);
     }
 
+/* //Kris wrote this, look at it later
+    public static String getEvenNumbersk(int start, int stop) { //
+        for ({String s = ""; int i=start;}; i < stop;i++) s = s + ((i % 2 == 0) ? i  : "");
+        return s;
+    }
+*/
 
     public static String getOddNumbers(int start, int stop) {
         StringBuilder sb = new StringBuilder();
@@ -41,19 +42,11 @@ public class NumberUtilities {
     }
 
     public static String getRange(int stop) {
-        StringBuilder sb = new StringBuilder();
-        for (int i=0;i < stop;i++) {
-            sb.append(i);
-        }
-        return sb.toString();
+        return getRange(0, stop, 1);
     }
 
     public static String getRange(int start, int stop) {
-        StringBuilder sb = new StringBuilder();
-        for (int i=start;i < stop;i++) {
-            sb.append(i);
-        }
-        return sb.toString();
+        return getRange(start, stop, 1);
     }
 
     public static String getRange(int start, int stop, int step) {
