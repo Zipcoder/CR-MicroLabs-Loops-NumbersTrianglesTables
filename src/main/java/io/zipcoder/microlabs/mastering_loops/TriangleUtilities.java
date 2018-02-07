@@ -37,7 +37,7 @@ public class TriangleUtilities {
 
     public static String getLargeTriangle() {
         StringBuilder triangle = new StringBuilder();
-        for (int count = 1; count < 10; count++) {
+        for (int count = 1; count < 11; count++) {
             for (int count2 = 0; count2 < count; count2++) {
                 triangle.append("*");
 
