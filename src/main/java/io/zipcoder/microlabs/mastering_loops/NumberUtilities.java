@@ -3,26 +3,51 @@ package io.zipcoder.microlabs.mastering_loops;
 
 public class NumberUtilities {
     public static String getEvenNumbers(int start, int stop) {
-        return null;
+
+        StringBuilder evensOnly = new StringBuilder();
+        for(int i = start; i <= stop; i++) {
+            if(i % 2 == 0) {
+                evensOnly.append(i);
+            }
+        }
+        return evensOnly.toString();
     }
 
 
     public static String getOddNumbers(int start, int stop) {
-        return null;
+        StringBuilder oddsOnly = new StringBuilder();
+        for(int i = start; i <= stop; i++) {
+            if(i % 2 != 0) {
+                oddsOnly.append(i);
+            }
+        }
+        return oddsOnly.toString();
     }
 
 
     public static String getSquareNumbers(int start, int stop, int step) {
-        return null;
+        StringBuilder squares = new StringBuilder();
+        for(int i = start; i < stop; i += step) {
+            squares.append((int)Math.pow(i, 2));
+        }
+        return squares.toString();
     }
 
 
     public static String getRange(int start, int stop, int step) {
-        return null;
+        StringBuilder range = new StringBuilder();
+        for(int i = start; i < stop; i += step) {
+            range.append(i);
+        }
+        return range.toString();
     }
 
 
     public static String getExponentiations(int start, int stop, int step, int exponent) {
-        return null;
+        StringBuilder exponentials = new StringBuilder();
+        for(int i = start; i < stop; i += step) {
+            exponentials.append((int)Math.pow(i, exponent));
+        }
+        return exponentials.toString();
     }
 }
