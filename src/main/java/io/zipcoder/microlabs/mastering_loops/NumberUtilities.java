@@ -3,7 +3,7 @@ package io.zipcoder.microlabs.mastering_loops;
 
 public class NumberUtilities {
     public static String getEvenNumbers(int start, int stop) {
-        return null;
+       return null;
     }
 
 
@@ -18,7 +18,11 @@ public class NumberUtilities {
 
 
     public static String getRange(int start, int stop, int step) {
-        return null;
+       StringBuilder sb = new StringBuilder();
+       for (int i=start;i<stop;i+=step) {
+           sb.append(i);
+       }
+       return sb.toString();
     }
 
 
