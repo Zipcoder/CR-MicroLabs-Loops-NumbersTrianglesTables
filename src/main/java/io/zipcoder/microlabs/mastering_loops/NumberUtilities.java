@@ -3,7 +3,7 @@ package io.zipcoder.microlabs.mastering_loops;
 
 public class NumberUtilities {
     public static String getEvenNumbers(int start, int stop) {
-
+git
         StringBuilder evensOnly = new StringBuilder();
         for(int i = start; i <= stop; i++) {
             if(i % 2 == 0) {
@@ -26,11 +26,7 @@ public class NumberUtilities {
 
 
     public static String getSquareNumbers(int start, int stop, int step) {
-        StringBuilder squares = new StringBuilder();
-        for(int i = start; i < stop; i += step) {
-            squares.append((int)Math.pow(i, 2));
-        }
-        return squares.toString();
+        return getExponentiations(start, stop, step, 2);
     }
 
 
