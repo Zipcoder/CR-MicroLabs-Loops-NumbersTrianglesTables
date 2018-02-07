@@ -109,4 +109,29 @@ public class NumberUtilitiesTest {
 
         Assert.assertEquals(expected, actual);
     }
+
+    @Test
+    public void testGetRangeWithOneParam() {
+        // : Given
+        String expected = "0123456789101112131415161718";
+        int stop = 19;
+
+        // : When
+        String actual = NumberUtilities.getRange(stop);
+
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testGetRangeWithTwoParams() {
+        // : Given
+        String expected = "5678910";
+        int start = 5;
+        int stop = 11;
+
+        // : When
+        String actual = NumberUtilities.getRange(start, stop);
+
+        Assert.assertEquals(expected, actual);
+    }
 }

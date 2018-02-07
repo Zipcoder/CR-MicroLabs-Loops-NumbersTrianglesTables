@@ -16,6 +16,21 @@ public class NumberUtilities {
         return null;
     }
 
+    public static String getRange(int stop) {
+        StringBuilder sb = new StringBuilder();
+        for (int i=0;i < stop;i++) {
+            sb.append(i);
+        }
+        return sb.toString();
+    }
+
+    public static String getRange(int start, int stop) {
+        StringBuilder sb = new StringBuilder();
+        for (int i=start;i < stop;i++) {
+            sb.append(i);
+        }
+        return sb.toString();
+    }
 
     public static String getRange(int start, int stop, int step) {
        StringBuilder sb = new StringBuilder();
