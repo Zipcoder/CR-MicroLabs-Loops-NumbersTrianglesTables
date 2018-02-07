@@ -10,8 +10,8 @@ import org.junit.runners.Suite;
 
 @Suite.SuiteClasses({
         NumberUtilitiesTest.class,
-        TriangleUtilitiesTest.class,
-        TableUtilitiesTest.class,
+        //TriangleUtilitiesTest.class,
+        //TableUtilitiesTest.class,
 })
 public class TestSuite {
 }
