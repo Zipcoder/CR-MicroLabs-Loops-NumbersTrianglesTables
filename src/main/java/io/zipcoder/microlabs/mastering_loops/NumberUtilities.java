@@ -66,6 +66,10 @@ public class NumberUtilities {
 
 
     public static String getExponentiations(int start, int stop, int step, int exponent) {
-        return null;
+        StringBuilder sb = new StringBuilder();
+        for (int i = start;i<stop;i+=step) {
+            sb.append((int)Math.pow(i, exponent));
+        }
+        return sb.toString();
     }
 }
