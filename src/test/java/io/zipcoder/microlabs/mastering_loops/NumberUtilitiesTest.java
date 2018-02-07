@@ -93,6 +93,17 @@ public class NumberUtilitiesTest {
         Assert.assertEquals(expected, actual);
     }
 
+    @Test
+    public void testGetPerfectSquares() {
+        // : Given
+        String expected = "14916253649";
+        int start = 1;
+        int stop = 50;
+
+        // : When
+        String actual = NumberUtilities.getPerfectSquares(start, stop);
+    }
+
 
     @Test
     public void testGetExponentiationNumbers() {

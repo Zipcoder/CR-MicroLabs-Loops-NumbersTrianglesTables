@@ -13,12 +13,31 @@ public class NumberUtilities {
 
 
     public static String getOddNumbers(int start, int stop) {
-        return null;
+        StringBuilder sb = new StringBuilder();
+        for (int i=start;i < stop;i++) {
+            if (i % 2 != 0) {
+                sb.append(i);
+            }
+        }
+        return sb.toString();
     }
 
-
     public static String getSquareNumbers(int start, int stop, int step) {
-        return null;
+        StringBuilder sb = new StringBuilder();
+        for (int i=start;i<stop;i+=step) {
+            sb.append(i*i);
+        }
+        return sb.toString();
+    }
+
+    public static String getPerfectSquares(int start, int stop) {
+        StringBuilder sb = new StringBuilder();
+        for (int i=start;i<stop;i++) {
+            if (Math.round(Math.sqrt(i)) == Math.sqrt(i)) { //if the number is the same after round() its a perfect square
+                sb.append(i);
+            }
+        }
+        return sb.toString();
     }
 
     public static String getRange(int stop) {
