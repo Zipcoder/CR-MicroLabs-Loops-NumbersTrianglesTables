@@ -69,9 +69,18 @@ public class NumberUtilities {
             expoNumbers.append(exp);
 
 
-
         }
 
         return expoNumbers.toString();
+    }
+
+    public static String getRange(int stop) {
+        String result = NumberUtilities.getRange(0, stop, 1);
+        return result;
+    }
+
+    public static String getRange(int start, int stop) {
+        String result = NumberUtilities.getRange(start, stop, 1);
+        return result;
     }
 }
