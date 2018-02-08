@@ -40,11 +40,23 @@ public class NumberUtilities {
 
 
     public static String getRange(int start, int stop, int step) {
-        return null;
+        String range = "";
+        for (int x = start; x <=stop; x += step) {
+            range += Integer.toString(x);
+        }
+        return range;
     }
 
 
     public static String getExponentiations(int start, int stop, int step, int exponent) {
-        return null;
+        String expo = "";
+
+        for(int x = start; x < stop; x+=step ) {
+            int num = (int) Math.pow(x,exponent);
+            expo += Integer.toString(num);
+
+        }
+
+        return expo;
     }
 }
