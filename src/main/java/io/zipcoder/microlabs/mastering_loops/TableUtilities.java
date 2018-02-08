@@ -13,8 +13,7 @@ public class TableUtilities {
         StringBuilder sb = new StringBuilder();
         for (int i = 1; i <= tableSize; i++) {
             for (int j = 1; j <= tableSize; j++) {
-                int n = i * j;
-                sb.append(String.format("%1$3s |", n));
+                sb.append(String.format("%1$3s |", (i * j)));
             }
             sb.append("\n");
         }
