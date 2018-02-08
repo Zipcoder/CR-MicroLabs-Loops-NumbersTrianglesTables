@@ -4,7 +4,7 @@ public class TriangleUtilities {
 
     public static String getTriangle(int numberOfRows) {
         String output ="";
-        for(int i = 0; i < numberOfRows; i++){
+        for(int i = 1; i < numberOfRows; i++){
             for(int j = 0; j < i;j++){
                 output += "*";
 
@@ -14,7 +14,7 @@ public class TriangleUtilities {
 
         }
 
-        return output.trim() + "\n";
+        return output;
 
 
 
@@ -36,7 +36,7 @@ public class TriangleUtilities {
 
     public static String getSmallTriangle() {
         String output ="";
-        for(int i = 0; i <= 4; i++){
+        for(int i = 1; i <= 4; i++){
             for(int j = 0; j < i;j++){
                 output += "*";
 
@@ -46,13 +46,13 @@ public class TriangleUtilities {
 
         }
 
-        return output.trim() + "\n";
+        return output;
 
     }
 
     public static String getLargeTriangle() {
         String output ="";
-        for(int i = 0; i < 10; i++){
+        for(int i = 1; i < 10; i++){
             for(int j = 0; j < i;j++){
                 output += "*";
 
@@ -62,7 +62,7 @@ public class TriangleUtilities {
 
         }
 
-        return output.trim() + "\n";
+        return output;
 
 
     }
