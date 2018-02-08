@@ -4,46 +4,27 @@ public class TriangleUtilities {
 
     public static String getTriangle(int numberOfRows) {
         StringBuilder builder = new StringBuilder();
-        for (int row = 1; row < numberOfRows; row++) {
-            for (int col = 0; col < row; col++) {
-                builder.append("*");
-            }
-            builder.append("\n");
+        for (int row = 0; row < numberOfRows; row++) {
+            builder.append(getRow(row));
         }
-
         return builder.toString();
-
     }
 
     public static String getRow(int numberOfStars) {
-        String asterisk = "";
-        for (int i = 0; i < numberOfStars; i++) {
-            asterisk += "*";
+        StringBuilder builder = new StringBuilder();
+
+        for (int i = 0; i <= numberOfStars; i++) {
+            builder.append("*");
         }
-        return asterisk;
+        builder.append("\n");
+        return builder.toString();
     }
 
     public static String getSmallTriangle() {
-        StringBuilder builder = new StringBuilder();
-        for (int row = 1; row <= 4; row++) {
-            for (int col = 0; col < row; col++) {
-                builder.append("*");
-            }
-            builder.append("\n");
-        }
-
-        return builder.toString();
+        return getTriangle(4);
     }
 
     public static String getLargeTriangle() {
-        StringBuilder builder = new StringBuilder();
-        for (int row = 1; row <= 9; row++) {
-            for (int col = 0; col < row; col++) {
-                builder.append("*");
-            }
-            builder.append("\n");
-        }
-
-        return builder.toString();
+        return getTriangle(9);
     }
 }
