@@ -8,10 +8,7 @@ import java.util.Scanner;
 public class MainApp {
     public static void main(String[] args) {
 
-        /*
-        NumberUtilities nu = new NumberUtilities();
-        System.out.println(nu.getEvenNumbers(0, 10));
-        */
+
 
     }
 }
