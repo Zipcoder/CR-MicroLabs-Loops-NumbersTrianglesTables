@@ -10,7 +10,7 @@ public class TriangleUtilities {
             }
             output += '\n';
         }
-        return output.trim() + "\n";
+        return output;
     }
 
 
@@ -23,25 +23,26 @@ public class TriangleUtilities {
     }
 
     public static String getSmallTriangle() {
+
         String output = "";
-        for (int i = 0; i <= 4; i++) {
+        for (int i = 1; i <= 4; i++) {
             for (int j = 0; j < i; j++) {
                 output += "*";
             }
             output += '\n';
         }
-        return output.trim() + "\n";
+        return output;
     }
 
 
     public static String getLargeTriangle() {
         String output = "";
-        for (int i = 0; i <= 9; i++) {
+        for (int i = 1; i <= 9; i++) {
             for (int j = 0; j < i; j++) {
                 output += "*";
             }
             output += '\n';
         }
-        return output.trim() + "\n";
+        return output;
     }
 }
