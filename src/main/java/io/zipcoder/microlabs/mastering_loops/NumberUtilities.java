@@ -38,7 +38,7 @@ public class NumberUtilities {
 
 
         for (int i = start; i < stop; i += step) {
-            myString.append(i*i);
+            myString.append(i * i);
 
         }
 
@@ -49,13 +49,27 @@ public class NumberUtilities {
 
     public static String getRange(int start, int stop, int step) {
 
+        StringBuilder myString = new StringBuilder();
 
+        for (int i = start; i < stop; i += step) {
+            myString.append(i);
+        }
 
-
+        return myString.toString();
     }
 
 
     public static String getExponentiations(int start, int stop, int step, int exponent) {
-        return null;
+
+        StringBuilder myString = new StringBuilder();
+
+
+        for (int i = start; i < stop; i += step) {
+            myString.append((long)(Math.pow(i, 2)));
+
+        }
+
+        return myString.toString();
+
     }
 }
