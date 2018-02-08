@@ -32,12 +32,26 @@ public class NumberUtilities {
 
 
     public static String getSquareNumbers(int start, int stop, int step) {
-        return null;
+
+
+        StringBuilder myString = new StringBuilder();
+
+
+        for (int i = start; i < stop; i += step) {
+            myString.append(i*i);
+
+        }
+
+        return myString.toString();
+
     }
 
 
     public static String getRange(int start, int stop, int step) {
-        return null;
+
+
+
+
     }
 
 
