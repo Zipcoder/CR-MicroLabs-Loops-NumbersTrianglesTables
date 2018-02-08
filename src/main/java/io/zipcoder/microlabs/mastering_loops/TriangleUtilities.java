@@ -2,7 +2,23 @@ package io.zipcoder.microlabs.mastering_loops;
 
 public class TriangleUtilities {
 
-    public static String getTriangle(int numberOfRows) { return null; }
+    public static String getTriangle(int numberOfRows) {
+
+        StringBuilder anyTriangle = new StringBuilder();
+        int size = numberOfRows;
+        int row = 1;
+
+        for (int i = 1; i <= size; i++) {
+
+            for (int k = 1; k <= row; k++) {
+                anyTriangle.append("*");
+            }
+            anyTriangle.append("\n");
+            row++;
+        }
+
+        return anyTriangle.toString();
+    }
 
 
 
