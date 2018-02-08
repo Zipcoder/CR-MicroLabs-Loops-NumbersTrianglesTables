@@ -49,29 +49,28 @@ public class NumberUtilitiesTest {
 
 
     @Test
-    public void testGetEvenNumbers() {
+    public void testGetOddNumbers() {
         // : Given
         String expected = "5791113151719";
         int start = 5;
         int stop = 20;
 
         // : When
-        String actual = NumberUtilities.getEvenNumbers(start, stop);
+        String actual = NumberUtilities.getOddNumbers(start, stop);
 
         // : Then
         Assert.assertEquals(expected, actual);
     }
 
     @Test
-    public void testGetOddNumbers() {
+    public void testGetEvenNumbers() {
         // : Given
         String expected = "681012141618";
         int start = 5;
         int stop = 20;
-        int step = 5;
 
         // : When
-        String actual = NumberUtilities.getOddNumbers(start, stop);
+        String actual = NumberUtilities.getEvenNumbers(start, stop);
 
         // : Then
         Assert.assertEquals(expected, actual);
@@ -94,6 +93,17 @@ public class NumberUtilitiesTest {
         Assert.assertEquals(expected, actual);
     }
 
+    @Test
+    public void testGetPerfectSquares() {
+        // : Given
+        String expected = "14916253649";
+        int start = 1;
+        int stop = 50;
+
+        // : When
+        String actual = NumberUtilities.getPerfectSquares(start, stop);
+    }
+
 
     @Test
     public void testGetExponentiationNumbers() {
@@ -106,6 +116,31 @@ public class NumberUtilitiesTest {
 
         // : When
         String actual = NumberUtilities.getExponentiations(start, stop, step, exponent);
+
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testGetRangeWithOneParam() {
+        // : Given
+        String expected = "0123456789101112131415161718";
+        int stop = 19;
+
+        // : When
+        String actual = NumberUtilities.getRange(stop);
+
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testGetRangeWithTwoParams() {
+        // : Given
+        String expected = "5678910";
+        int start = 5;
+        int stop = 11;
+
+        // : When
+        String actual = NumberUtilities.getRange(start, stop);
 
         Assert.assertEquals(expected, actual);
     }
