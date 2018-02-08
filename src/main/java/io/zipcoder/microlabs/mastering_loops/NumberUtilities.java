@@ -57,6 +57,13 @@ public class NumberUtilities {
 
 
     public static String getExponentiations(int start, int stop, int step, int exponent) {
-        return null;
+
+        StringBuilder exponentBuilder = new StringBuilder();
+        for (int i = start; i < stop ; i = i + step){
+            long exponentiatedValue = (long)Math.pow(i, exponent);
+            exponentBuilder.append(exponentiatedValue);
+        }
+
+        return exponentBuilder.toString();
     }
 }
