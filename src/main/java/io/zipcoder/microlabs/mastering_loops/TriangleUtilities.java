@@ -31,12 +31,37 @@ public class TriangleUtilities {
     }
 
     public static String getSmallTriangle() {
-        return null;
+
+        StringBuilder myString = new StringBuilder();
+
+        for (int i = 0; i <= 3; i++) {
+
+            for (int j = 0; j < i; j++) {
+                myString.append("*");
+
+            }
+            myString.append("*\n");
+
+        }
+
+        return myString.toString();
     }
 
     public static String getLargeTriangle() {
 
+       StringBuilder myString = new StringBuilder();
 
-        return null;
+       for (int i = 0; i <= 8; i++) {
+
+           for (int j = 0; j < i; j++) {
+               myString.append("*");
+           }
+
+           myString.append("*\n");
+
+       }
+
+       return myString.toString();
+
     }
 }
