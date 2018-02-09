@@ -49,20 +49,26 @@ public class TableUtilities
 
     public static String getMultiplicationTable(int tableSize) {
 
-        StringBuilder multiplicationTable = new StringBuilder();
 
-        for (int i = 0; i <= tableSize; i++){
 
-            for (int j = 0; j <= tableSize; j++)
-            {
-                int num = i * j;
-                multiplicationTable.append(String.format("%3d |", num));
+            StringBuilder multiplicationTable = new StringBuilder();
+
+            for (int i = 1; i <= tableSize; i++){
+
+                for (int j = 1; j <= tableSize; j++){
+
+                    int num = i * j;
+                    multiplicationTable.append(String.format("%3d |", num));
+
+                } multiplicationTable.append(String.format("\n"));
 
             }
 
+            String myTable = multiplicationTable.toString();
+            return myTable;
+
+
         }
 
-
-        return null;
     }
-}
+
