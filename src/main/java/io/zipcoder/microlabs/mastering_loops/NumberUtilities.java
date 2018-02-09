@@ -16,21 +16,43 @@ public class NumberUtilities {
 
 
     public static String getOddNumbers(int start, int stop) {
-        return null;
+        StringBuilder odds = new StringBuilder();
+        for (int i = start; i <stop; i++) {
+            if (i % 2 == 1) {
+                odds.append(i);
+            }
+        }
+
+        return odds.toString();
     }
 
 
     public static String getSquareNumbers(int start, int stop, int step) {
-        return null;
+        StringBuilder getSquares = new StringBuilder();
+        for (int i = start; i < stop; i+=step){
+            getSquares.append((int) Math.pow(i,2));
+        }
+
+        return getSquares.toString();
     }
 
 
     public static String getRange(int start, int stop, int step) {
-        return null;
+        StringBuilder myRange = new StringBuilder();
+        for (int i = start; i < stop; i+=step){
+            myRange.append(i);
+        }
+
+        return myRange.toString();
     }
 
 
     public static String getExponentiations(int start, int stop, int step, int exponent) {
-        return null;
+        StringBuilder myExponents = new StringBuilder();
+        for (int i = start; i<stop; i+=step){
+            myExponents.append((int) Math.pow(i,exponent));
+        }
+
+        return myExponents.toString();
     }
 }
