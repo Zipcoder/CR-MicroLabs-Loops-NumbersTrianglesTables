@@ -18,11 +18,7 @@ public class NumberUtilities {
     }
 
     public static String getSquareNumbers(int start, int stop, int step) {
-        StringBuilder sb = new StringBuilder();
-        for (int i=start;i<stop;i+=step) {
-            sb.append(i*i);
-        }
-        return sb.toString();
+        return getExponentiations(start, stop, step, 2);
     }
 
     public static String getPerfectSquares(int start, int stop) {
