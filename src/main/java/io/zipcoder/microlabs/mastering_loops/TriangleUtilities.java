@@ -24,10 +24,28 @@ public class TriangleUtilities {
     }
 
     public static String getSmallTriangle() {
-        return null;
+        StringBuilder smallTri = new StringBuilder();
+        for (int i = 1; i < 5; i++) {
+            for (int j = 0; j < i; j++) {
+                smallTri.append("*");
+            }
+            smallTri.append("\n");
+        }
+
+        return smallTri.toString();
     }
 
     public static String getLargeTriangle() {
-        return null;
+
+        StringBuilder largeTri = new StringBuilder();
+        for (int i = 1; i < 10; i++) {
+            for (int j = 0; j < i; j++) {
+                largeTri.append("*");
+            }
+            largeTri.append("\n");
+        }
+
+        return largeTri.toString();
     }
-}
+    }
+
