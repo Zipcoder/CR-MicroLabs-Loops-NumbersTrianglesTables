@@ -50,18 +50,25 @@ public class NumberUtilities {
 
     public static String getRange(int start, int stop, int step) {
 
+    String holder = "";
 
+    for(int i = start; i < stop; i += step) {
 
+        holder += i;
+    }
 
-
-
-
-
-        return null;
+        return holder;
     }
 
 
     public static String getExponentiations(int start, int stop, int step, int exponent) {
-        return null;
+
+        String exp_num = "";
+
+        for (int i = start; i < stop; i += step){
+            exp_num += "" +(int)Math.pow(i, exponent);
+        }
+        return exp_num;
     }
+
 }
