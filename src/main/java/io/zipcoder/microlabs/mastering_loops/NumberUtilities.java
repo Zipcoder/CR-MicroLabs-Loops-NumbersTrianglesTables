@@ -50,7 +50,13 @@ public class NumberUtilities {
 
 
 
-    public static String getExponentiations( int start, int stop, int step, int exponent){
-            return null;
+    public static String getExponentiationNumbers( int start, int stop, int step, int exponent){
+            StringBuilder expoS = new StringBuilder();
+
+            for(int i = start; i < stop; i+= step){
+                int powerS = (int) Math.pow(i, exponent);
+                expoS.append(powerS);
+            }
+            return expoS.toString();
         }
     }

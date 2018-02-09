@@ -82,7 +82,7 @@ public class NumberUtilitiesTest {
     }
 
 
-    /*@Test
+    @Test
     public void testGetExponentiationNumbers() {
         // : Given
         String expected = "25100225";
@@ -95,5 +95,5 @@ public class NumberUtilitiesTest {
         String actual = NumberUtilities.getExponentiationNumbers(start, stop, step, exponent);
 
         Assert.assertEquals(expected, actual);
-    }*/
+    }
 }
