@@ -9,7 +9,7 @@ public class TableUtilities {
 
             for (int j = 1; j <= 5; j++) {
 
-                myString.append(i + " | ");
+                myString.append(i*j + " | ");
 
             }
 
