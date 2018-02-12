@@ -2,9 +2,22 @@ package io.zipcoder.microlabs.mastering_loops;
 
 public class TableUtilities {
     public static String getSmallMultiplicationTable() {
-        return null;
-    }
+        StringBuilder smt = new StringBuilder();
 
+        for (int i = 1; i <= 5; i++) {
+            for (int j = 1; j <= 5; j++) {
+
+                int num = i * j;
+
+                smt.append(String.format("%3d |", num));
+
+            }
+            smt.append("\n");
+
+        }
+        String myTable = smt.toString();
+        return myTable;
+    }
 
     public static String getLargeMultiplicationTable() {
 
