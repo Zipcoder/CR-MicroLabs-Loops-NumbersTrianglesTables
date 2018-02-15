@@ -234,7 +234,7 @@
     // : Given
     int start = 5;
     int stop = 20;
-    int step = 2;
+    int step = 5;
     int exponent = 2;
     
     // : When
