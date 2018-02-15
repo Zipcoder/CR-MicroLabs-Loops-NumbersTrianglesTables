@@ -5,7 +5,7 @@ public class NumberUtilities {
     public static String getEvenNumbers(int start, int stop) {
         StringBuilder even = new StringBuilder();
         for (int i = start; i < stop; i++) {
-            if (i % 2 == 0) {
+            if (i % 2 != 0) {
                 even.append(i);
             }
 
@@ -40,14 +40,33 @@ public class NumberUtilities {
 
     }
 
-    public static String getRange(int start) {
+    public static String getRange(int stop) {
+        StringBuilder range1 = new StringBuilder();
+        for (int i =0; i < stop; i++) {
 
-        return null;
+            range1.append(i);
+
+
+        }
+        return range1.toString();
+
+
+
 
     }
 
     public static String getRange(int start, int stop) {
-        return null;
+        StringBuilder range = new StringBuilder();
+        for (int i = start; i < stop; i++) {
+
+            range.append(i);
+
+
+        }
+        return range.toString();
+
+
+
     }
 
 
@@ -55,7 +74,7 @@ public class NumberUtilities {
         StringBuilder rangeNum = new StringBuilder();
         for (int i = start; i < stop; i += step) {
 
-                rangeNum.append(i);
+            rangeNum.append(i);
 
 
         }
@@ -65,6 +84,13 @@ public class NumberUtilities {
 
 
     public static String getExponentiations(int start, int stop, int step, int exponent) {
-        return null;
+        StringBuilder old = new StringBuilder();
+        for (int i = start; i < stop; i += step) {
+
+            old.append(i * i);
+        }
+        return old.toString();
     }
 }
+
+
