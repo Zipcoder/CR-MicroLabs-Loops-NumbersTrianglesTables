@@ -3,58 +3,52 @@ package io.zipcoder.microlabs.mastering_loops;
 public class TriangleUtilities {
 
     public static String getTriangle(int numberOfRows) {
+        StringBuilder newTriangle = new StringBuilder("*\n");
+        StringBuilder newLine = new StringBuilder("*");
+        int counter = 1;
+        while (counter < numberOfRows - 1) {
+            newLine.append("*");
+            newTriangle.append(newLine).append("\n");
+            counter++;
+        }
 
-            String newTriangle = "*\n";
-            String newLine= "*";
-            int counter = 1;
-
-            while(counter < numberOfRows - 1){
-                 newLine += "*";
-                 newTriangle += newLine + "\n";
-                 counter++;
-          }
-         return newTriangle;
+        return newTriangle.toString();
     }
 
     public static String getRow(int numberOfStars) {
-
-            String star = "";
-            int counter = 1;
-
-            while(counter <= numberOfStars) {
-                star = star + "*";
-                counter++;
+        StringBuilder star = new StringBuilder();
+        int counter = 1;
+        while (counter <= numberOfStars) {
+            star.append("*");
+            counter++;
         }
-        return star;
+
+        return star.toString();
     }
 
     public static String getSmallTriangle() {
-
-        String newTriangle = "*\n";
-        String newLine = "*";
+        StringBuilder newTriangle = new StringBuilder("*\n");
+        StringBuilder newLine = new StringBuilder("*");
         int counter = 1;
-
-        while(counter < 4){
-            newLine += "*";
-            newTriangle += newLine + "\n";
+        while (counter < 4) {
+            newLine.append("*");
+            newTriangle.append(newLine).append("\n");
             counter++;
         }
-        return newTriangle;
+
+        return newTriangle.toString();
     }
 
     public static String getLargeTriangle() {
-
-            String newTriangle = "*\n";
-            String newLine = "*";
-            int counter = 1;
-
-            while(counter < 9){
-                newLine += "*";
-                newTriangle += newLine + "\n";
-                counter++;
+        StringBuilder newTriangle = new StringBuilder("*\n");
+        StringBuilder newLine = new StringBuilder("*");
+        int counter = 1;
+        while (counter < 9) {
+            newLine.append("*");
+            newTriangle.append(newLine).append("\n");
+            counter++;
         }
-        return newTriangle;
+
+        return newTriangle.toString();
     }
 }
-
-// woo!

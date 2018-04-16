@@ -1,6 +1,10 @@
 package io.zipcoder.microlabs.mastering_loops;
 
 public class TableUtilities {
+    /**
+     *
+     * @return a formatted multiplication table of various sizes
+     */
 
     public String getSmallMultiplicationTable() {
         StringBuilder smallTable = new StringBuilder();
