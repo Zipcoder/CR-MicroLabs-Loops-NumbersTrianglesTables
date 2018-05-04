@@ -25,7 +25,6 @@ public class TableUtilities {
             }
             large += multiply + "\n";
         }
-
         return large;
     }
 

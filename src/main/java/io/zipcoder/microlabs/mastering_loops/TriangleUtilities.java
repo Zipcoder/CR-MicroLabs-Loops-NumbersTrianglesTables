@@ -18,7 +18,7 @@ public class TriangleUtilities {
         String aster = "";
         int counter = 1;
         while(counter <= numberOfStars) {
-            aster = aster + "*";
+            aster += "*";
             counter++;
         }
         return aster;
