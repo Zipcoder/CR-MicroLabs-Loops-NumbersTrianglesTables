@@ -2,49 +2,31 @@ package io.zipcoder.microlabs.mastering_loops;
 
 public class TriangleUtilities {
 
-    public static String getTriangle(int numberOfRows) {
-        int counter = 1;
-        String aTri= "*\n";
-        String aLine= "*";
-        while(counter < numberOfRows-1){
-            aLine += "*";
-            aTri += aLine + "\n";
-            counter++;
-        }
-        return aTri;
-    }
 
     public static String getRow(int numberOfStars) {
-        String aster = "";
-        int counter = 1;
-        while(counter <= numberOfStars) {
-            aster += "*";
+        StringBuilder aster = new StringBuilder();
+        int counter = 0;
+        while(counter < numberOfStars) {
+            aster.append("*");
             counter++;
         }
-        return aster;
+        return aster.toString();
+    }
+
+    public static String getTriangle(int numberOfRows) {
+        StringBuilder builder = new StringBuilder();
+        for(int i = 1; i<=numberOfRows; i++){
+            builder.append(getRow(i))
+                    .append("\n");
+        }
+        return builder.toString();
     }
 
     public static String getSmallTriangle() {
-        int counter = 1;
-        String aTri= "*\n";
-        String aLine= "*";
-        while(counter < 4){
-            aLine += "*";
-            aTri += aLine + "\n";
-            counter++;
-        }
-        return aTri;
+        return getTriangle(4);
     }
 
     public static String getLargeTriangle() {
-        int counter = 1;
-        String aTri= "*\n";
-        String aLine= "*";
-        while(counter < 9){
-            aLine += "*";
-            aTri += aLine + "\n";
-            counter++;
-        }
-        return aTri;
+        return getTriangle(9);
     }
 }

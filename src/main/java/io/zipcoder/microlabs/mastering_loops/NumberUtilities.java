@@ -4,35 +4,36 @@ package io.zipcoder.microlabs.mastering_loops;
 public class NumberUtilities {
 
     public static String getEvenNumbers(int start, int stop) {
-        String evens = "";
         if(start%2 != 0)  start += 1;
-        for(int i = start; i < stop; i+=2)  evens += i;
-        return evens;
+        return getRange(start,stop,2);
     }
 
     public static String getOddNumbers(int start, int stop) {
-        String odds = "";
         if(start %2 == 0) start += 1;
-        for(int i = start; i < stop; i+=2)  odds += i;
-        return odds;
+        return getRange(start,stop,2);
     }
 
     public static String getSquareNumbers(int start, int stop, int step) {
-        String square = "";
-        for(int i = start; i < stop; i+=step) square += (i*i);
-        return square;
+        StringBuilder square = new StringBuilder();
+        for(int i = start; i < stop; i+=step) square.append(i*i);
+        return square.toString();
     }
 
     public static String getRange(int start, int stop, int step) {
-        String xEach = "";
-        for(int i = start; i < stop; i+=step) xEach += i;
-        return xEach;
+        StringBuilder xEach = new StringBuilder();
+        for(int i = start; i < stop; i+=step) xEach.append(i);
+        return xEach.toString();
     }
 
     public static String getExponentiations(int start, int stop, int step, int exponent) {
-        String expo = "";
+        StringBuilder expo = new StringBuilder();
         for(int i = start; i< stop; i+=step){
-            expo += (int)(Math.pow(i, exponent)); }
-        return expo;
+            expo.append((int)(Math.pow(i, exponent)));
+        }
+        return expo.toString();
+    }
+
+    public static void main(String[] args){
+
     }
 }

@@ -3,41 +3,21 @@ package io.zipcoder.microlabs.mastering_loops;
 public class TableUtilities {
 
     public static String getSmallMultiplicationTable() {
-        String small = "";
-        for(int i = 1; i < 6; i++) {
-            String multiply = "";
-            for (int j = 1; j < 6; j++) {
-                int x = j*i;
-                multiply += String.format("%3d", x) + " |";
-            }
-            small += multiply + "\n";
-        }
-        return small;
+        return getMultiplicationTable(5);
     }
 
     public static String getLargeMultiplicationTable() {
-        String large = "";
-        for(int i = 1; i < 11; i++) {
-            String multiply = "";
-            for (int j = 1; j < 11; j++) {
-                int x = j * i;
-                multiply += String.format("%3d", x) + " |";
-            }
-            large += multiply + "\n";
-        }
-        return large;
+        return getMultiplicationTable(10);
     }
 
     public static String getMultiplicationTable(int tableSize) {
-        String size = "";
+        StringBuilder size = new StringBuilder();
         for(int i = 1; i <= tableSize; i++) {
-            String multiply = "";
             for (int j = 1; j <= tableSize; j++) {
-                int x = j * i;
-                multiply += String.format("%3d", x) + " |";
+                size.append(String.format("%3d |", j*i));
             }
-            size += multiply + "\n";
+            size.append("\n");
         }
-        return size;
+        return size.toString();
     }
 }
